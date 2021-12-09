@@ -1,13 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 @import '/node_modules/fullpage.js/dist/fullpage.css';
+
 // .section{
 //     height: 100vh;
 // }
-header {
-    .top_row{
-        svg{
-            fill: #434040;
-            
-        }
+
+@function toRem($value) {
+    $remValue: ($value / 16) + rem;
+    @return $remValue;
+}
+
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+a,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+
+}
+
+// a {
+//   text-decoration: none;
+//   font-family: 'PT Sans Caption', sans-serif;
+// }
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article>*+* {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+
+
+.container {
+    max-width: toRem(1580);
+    width: 100%;
+    margin: auto;
+
+}
+
+@media screen and (max-width:1200px) {
+    .container {
+        max-width: 90%;
     }
 }
 
@@ -17,5 +112,195 @@ header {
 
 
 
+a {
+    text-decoration: none;
+}
+
+header {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+
+    .top_row{
+        background: #fff;
+        .container {
+          
+            padding-top: toRem(22);
+            padding-bottom: toRem(19);
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+    
+            .top_item {
+                color: #434040;
+                padding-left: toRem(35);
+                padding-right: toRem(35);
+    
+                &:hover {
+                    color: #13AC6C;
+    
+                    svg {
+                        fill: #13AC6C;
+    
+                    }
+                }
+            }
+    
+            svg {
+                margin-right: toRem(10);
+    
+                fill: #434040;
+    
+            }
+        }
+    } 
+
+    .bottom_row {
+        height: toRem(110);
+        display: flex;
+        // align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 0;
+            margin-bottom: 0;
+            &>div{
+                height: 100%;
+            }
+        }
+
+        menu {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-grow: 1;
+height: 100%;
+padding-left: 0;
+
+            .menu_item {
+                // padding-top: toRem(15);
+                // padding-bottom: toRem(15);
+                width: 20%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-style: normal;
+                font-weight: 100;
+                font-size: 18px;
+                line-height: 18px;
+                /* identical to box height */
+                transition: ease 300ms;
+
+                color: #F7F9FB;
+
+                &:hover{
+                    // background: linear-gradient(119.31deg, rgba(254, 254, 254, 0.0957) 4.9%, rgba(250, 250, 250, 0.0737) 108.34%);
+                    background-color: rgba(254, 254, 254, 0.0957) ;
+                }
+            }
+        }
+
+        .social {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: toRem(27);
+            align-items: flex-start;
+            // background: #13AC6C;
+            transition: 300ms ease;
+            // align-items: center;
+            a{
 
 
+color: #FFFFFF;
+
+            }
+            .social_tel{
+                font-weight: bold;
+                font-size: toRem(21);
+                line-height: 174.5%;
+                /* identical to box height, or 37px */
+                margin-bottom: toRem(12);
+                
+            }
+            .callback_btn{
+                font-size: 17px;
+                line-height: 174.5%;
+                /* identical to box height, or 30px */
+
+                text-decoration-line: underline;
+
+                color: #FFFFFF;
+            }
+            &::after{
+                content: '';
+                display: block;
+                background: #13AC6C;
+                width: toRem(440);
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+                transition: ease 300ms;
+
+            }
+            &:hover{
+                // background: #DCC96C;
+                &::after{
+                    background: #DCC96C;
+                }
+            }
+        }
+
+        .logo {
+            border-right: 1px solid rgba(255, 255, 255, 0.12);
+           width: toRem(225); 
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           height: 100%;
+        }
+    }
+}
+
+#section0{
+    background-image: url('public/products/main_screen.png');
+}
+#fp-nav.fp-right{
+top: auto;
+bottom: toRem(60);
+transform: rotate(90deg);
+left: toRem(270);
+right: auto;
+ul li a.active{ 
+    border-radius: 120px;
+    border: 2px solid #424242;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul li a.active span{
+    background: #DCC96C;
+
+}
+ul li a {
+    // position: relative;
+}
+ul li a span{
+    background: #FFFFFF;
+    border: 1px solid #434040;
+    width: 15px;
+height: 15px;
+
+left: 40%;
+top: 40%;
+
+}
+}
