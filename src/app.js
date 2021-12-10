@@ -78,7 +78,10 @@
 // //methods
 // fullpage_api.setAllowScrolling(false);
 
-
+  // import Swiper JS
+  import Swiper, { Navigation, Pagination } from 'swiper';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
 
 
 
@@ -149,3 +152,19 @@ window.addEventListener("DOMContentLoaded", function() {
         fontSize();
       });
     
+
+
+    //   swiper
+
+      var swiper = new Swiper(".swiper_main", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });

@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Yeseva+One&display=swap');
 
+
+// import fullpage
 @import '/node_modules/fullpage.js/dist/fullpage.css';
-
+// import Swiper styles
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
 // .section{
 //     height: 100vh;
 // }
@@ -97,6 +103,8 @@ select {
     max-width: toRem(1580);
     width: 100%;
     margin: auto;
+    margin-top: 0;
+    margin-bottom: 0;
 
 }
 
@@ -121,52 +129,63 @@ header {
     z-index: 2;
     width: 100%;
 
-    .top_row{
+    .top_row {
         background: #fff;
+
         .container {
-          
-            padding-top: toRem(22);
-            padding-bottom: toRem(19);
+
+            padding-top: toRem(15);
+            padding-bottom: toRem(15);
             display: flex;
             align-items: flex-end;
             justify-content: flex-start;
-    
+
             .top_item {
                 color: #434040;
                 padding-left: toRem(35);
                 padding-right: toRem(35);
-    
+                font-style: italic;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 16px;
+                /* identical to box height */
+
+
+                color: #434040;
+
                 &:hover {
                     color: #13AC6C;
-    
+
                     svg {
                         fill: #13AC6C;
-    
+
                     }
                 }
             }
-    
+
             svg {
                 margin-right: toRem(10);
-    
+
                 fill: #434040;
-    
+
             }
         }
-    } 
+    }
 
     .bottom_row {
         height: toRem(110);
         display: flex;
         // align-items: center;
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-top: 0;
             margin-bottom: 0;
-            &>div{
+
+            &>div {
                 height: 100%;
             }
         }
@@ -176,8 +195,11 @@ header {
             align-items: center;
             justify-content: space-around;
             flex-grow: 1;
-height: 100%;
-padding-left: 0;
+            height: 100%;
+            padding-left: 0;
+            background: linear-gradient(96.98deg, rgba(37, 37, 37, 0.62) 4.6%, rgba(0, 0, 0, 0) 89.7%);
+
+
 
             .menu_item {
                 // padding-top: toRem(15);
@@ -196,9 +218,14 @@ padding-left: 0;
 
                 color: #F7F9FB;
 
-                &:hover{
+                &.active {
+
+                    background: rgba(206, 188, 99, 0.88);
+                }
+
+                &:hover {
                     // background: linear-gradient(119.31deg, rgba(254, 254, 254, 0.0957) 4.9%, rgba(250, 250, 250, 0.0737) 108.34%);
-                    background-color: rgba(254, 254, 254, 0.0957) ;
+                    background-color: rgba(254, 254, 254, 0.0957);
                 }
             }
         }
@@ -212,22 +239,25 @@ padding-left: 0;
             align-items: flex-start;
             // background: #13AC6C;
             transition: 300ms ease;
+
             // align-items: center;
-            a{
+            a {
 
 
-color: #FFFFFF;
+                color: #FFFFFF;
 
             }
-            .social_tel{
+
+            .social_tel {
                 font-weight: bold;
                 font-size: toRem(21);
                 line-height: 174.5%;
                 /* identical to box height, or 37px */
                 margin-bottom: toRem(12);
-                
+
             }
-            .callback_btn{
+
+            .callback_btn {
                 font-size: 17px;
                 line-height: 174.5%;
                 /* identical to box height, or 30px */
@@ -236,7 +266,8 @@ color: #FFFFFF;
 
                 color: #FFFFFF;
             }
-            &::after{
+
+            &::after {
                 content: '';
                 display: block;
                 background: #13AC6C;
@@ -250,9 +281,11 @@ color: #FFFFFF;
                 transition: ease 300ms;
 
             }
-            &:hover{
+
+            &:hover {
+
                 // background: #DCC96C;
-                &::after{
+                &::after {
                     background: #DCC96C;
                 }
             }
@@ -260,47 +293,160 @@ color: #FFFFFF;
 
         .logo {
             border-right: 1px solid rgba(255, 255, 255, 0.12);
-           width: toRem(225); 
-           display: flex;
-           align-items: center;
-           justify-content: center;
-           height: 100%;
+            width: toRem(225);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
         }
     }
 }
 
-#section0{
-    background-image: url('public/products/main_screen.png');
+#section0 {
+    .swiper-slide {
+        width: 100%;
+        height: 100%;
+    }
 }
-#fp-nav.fp-right{
-top: auto;
-bottom: toRem(60);
-transform: rotate(90deg);
-left: toRem(270);
-right: auto;
-ul li a.active{ 
-    border-radius: 120px;
-    border: 2px solid #424242;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-ul li a.active span{
-    background: #DCC96C;
 
+#fp-nav.fp-right {
+    top: auto;
+    bottom: toRem(0);
+    transform: rotate(270deg);
+    left: toRem(270);
+    right: auto;
+
+    ul li {
+        width: 37px;
+        height: 37px;
+    }
+
+    ul li a.active {
+        border-radius: 120px;
+        border: 2px solid #424242;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ul li a.active span {
+        background: #DCC96C;
+        // left: calc( 100% - 15px);
+
+        // left:  16.5%;
+        // top:  16.5%;
+        // position: static;
+        // margin: 0;
+    }
+
+    ul li a {
+        // position: relative;
+    }
+
+    ul li a span.fp-sr-only {
+        display: none;
+    }
+
+    ul li a span {
+        background: #FFFFFF;
+        border: 1px solid #434040;
+        width: 15px;
+        height: 15px;
+
+
+    }
+
+    #fp-nav ul li a span,
+    .fp-slidesNav ul li a span {
+        // left: 34%;
+
+    }
 }
-ul li a {
-    // position: relative;
+
+#fp-nav ul li a:hover span {
+    background: #13AC6C;
 }
-ul li a span{
-    background: #FFFFFF;
-    border: 1px solid #434040;
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    left: 38%;
+}
+
+#fp-nav.fp-right ul li a.active span {
     width: 15px;
-height: 15px;
-
-left: 40%;
-top: 40%;
-
+    height: 15px;
+    left: 45%;
+    top: 45%;
 }
+
+.swiper_main {
+    height: 100%;
+
+    .swiper-slide {
+        display: flex;
+        background-position: center;
+        background-size: cover;
+       
+
+        .slide_main_info {
+            background: rgba(0, 0, 0, 0.01);
+            backdrop-filter: blur(34px);
+            border-radius: 2px;
+            margin-top: toRem(260);
+            margin-left: toRem(160);
+            width: toRem(670);
+            height: toRem(500);
+            padding: toRem(50) toRem(60);
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .title {
+                .color_letter {
+                    font-family: 'Yeseva One', cursive;
+                    font-size: toRem(140);
+                    line-height: toRem(162);
+                    /* identical to box height */
+
+                    letter-spacing: 0.105em;
+                    text-transform: uppercase;
+
+                    color: #DCC96C;
+
+                    text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+                }
+                font-style: normal;
+                font-weight: normal;
+                font-family: 'Yeseva One';
+                font-size: toRem(55);
+                line-height: toRem(64);
+                letter-spacing: 0.105em;
+                text-transform: uppercase;
+
+                color: #F7F9FB;
+
+                text-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+                margin-bottom: toRem(37);
+                .title_gap{
+                    margin-left: toRem(180);
+                    font-size: toRem(45);
+                }
+            }
+
+            .subtitle {
+                font-size: toRem(19);
+                line-height: toRem(31);
+                color: #F7F9FB;
+            }
+        }
+    }
+
+    .serv_link {
+
+        svg {
+            fill: #F7F9FB;
+        }
+    }
 }
