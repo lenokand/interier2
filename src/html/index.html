@@ -9,7 +9,7 @@
 
     <link rel="icon" type="image/x-icon" sizes="16x16" href="icons/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="dist/fullpage.css"> -->
     <link rel="stylesheet" href="bundle.css">
 </head>
@@ -95,7 +95,7 @@
 
                             <div class="slide_main_info">
                                 <div class="title">
-                                  <span class="color_letter">Д</span>изайн
+                                    <span class="color_letter">Д</span>изайн
                                     <span class="title_gap">интерьера</span>
                                 </div>
                                 <div class="subtitle">
@@ -108,11 +108,18 @@
                                         <path fill-rule="evenodd" clip-rule="evenodd"
                                             d="M16.4577 20.0138L29.828 6.70514V15.0737H33.4947V0.474609H18.828V4.12437H27.2353L13.865 17.433L16.4577 20.0138ZM29.8333 29.6727V20.5483H26.1667V29.6727H4.16667V7.77413H13.3333V4.12437H4.16667C2.14162 4.12437 0.5 5.75843 0.5 7.77413V29.6727C0.5 31.6884 2.14162 33.3225 4.16667 33.3225H26.1667C28.1917 33.3225 29.8333 31.6884 29.8333 29.6727Z" />
                                     </svg>
-    
+
                                     Перейти
                                 </a>
                             </div>
-                            
+                            <div class="slider_counts">
+                                <span class="number">
+                                    128
+                                </span>
+                                решений
+
+                            </div>
+
 
                         </div>
 
@@ -133,6 +140,36 @@
                         <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
                     </div>
                 </div>
+                <div class="swiper_pagination_block">
+
+                    <div class="swiper_pagination_center">
+                        <div class="swiper-button-prev">
+                            <svg width="14" height="23" viewBox="0 0 14 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.939189 12.5607C0.353402 11.9749 0.353402 11.0251 0.939189 10.4393L10.4851 0.893398C11.0709 0.307611 12.0207 0.307611 12.6065 0.893398C13.1922 1.47919 13.1922 2.42893 12.6065 3.01472L4.12117 11.5L12.6065 19.9853C13.1922 20.5711 13.1922 21.5208 12.6065 22.1066C12.0207 22.6924 11.0709 22.6924 10.4851 22.1066L0.939189 12.5607ZM3.41406 13H1.99985V10H3.41406V13Z" />
+                            </svg>
+
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                            <svg width="13" height="23" viewBox="0 0 13 23" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.4749 12.5607C13.0607 11.9749 13.0607 11.0251 12.4749 10.4393L2.92893 0.893398C2.34315 0.307611 1.3934 0.307611 0.807611 0.893398C0.221826 1.47919 0.221826 2.42893 0.807611 3.01472L9.29289 11.5L0.807611 19.9853C0.221826 20.5711 0.221826 21.5208 0.807611 22.1066C1.3934 22.6924 2.34315 22.6924 2.92893 22.1066L12.4749 12.5607ZM10 13H11.4142V10H10V13Z" />
+                            </svg>
+
+                        </div>
+                    </div>
+
+                    <div class="totale_slides">
+
+                    </div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+
 
 
             </div>
@@ -176,11 +213,64 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
         integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script type="text/javascript">
         var myFullpage = new fullpage('#fullpage', {
             // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
             navigation: true,
+        });
+
+
+        var swiper = new Swiper(".swiper_main", {
+            spaceBetween: 30,
+            effect: "fade",
+            fadeEffect: {
+                crossFade: true
+            },
+            pagination: {
+                el: ".swiper-scrollbar",
+                type: "progressbar",
+
+                // el: ".swiper-pagination",
+                // // type: "fraction",
+                // clickable: true,
+                // // clickable: true,
+                // renderBullet: function (index, className) {
+                //     if (index <= 9) {
+                //         return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+
+                //     } else {
+                //         return '<span class="' + className + '">' + (index + 1) + "</span>";
+                //     }
+
+                // },
+            },
+            
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     // type: "fraction",
+            //     clickable: true,
+            //     // clickable: true,
+            //     renderBullet: function (index, className) {
+            //         if (index <= 9) {
+            //             return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+
+            //         } else {
+            //             return '<span class="' + className + '">' + (index + 1) + "</span>";
+            //         }
+
+            //     },
+            // },
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+            // autoplay: {
+            //     delay: 8000,
+            // },
         });
     </script>
 </body>

@@ -84,6 +84,8 @@
   import 'swiper/css/pagination';
 
 
+// configure Swiper to use modules
+Swiper.use([Navigation, Pagination]);
 
 window.addEventListener("DOMContentLoaded", function() {
     [].forEach.call( document.querySelectorAll('.tel'), function(input) {
@@ -156,15 +158,56 @@ window.addEventListener("DOMContentLoaded", function() {
 
     //   swiper
 
-      var swiper = new Swiper(".swiper_main", {
-        spaceBetween: 30,
-        effect: "fade",
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
+    //   var swiper = new Swiper(".swiper_main", {
+    //     spaceBetween: 30,
+    //     effect: "fade",
+    //     navigation: {
+    //       nextEl: ".swiper-button-next",
+    //       prevEl: ".swiper-button-prev",
+    //     },
+    //     pagination: {
+    //       el: ".swiper-pagination",
+    //       clickable: true,
+    //     },
+    //   });
+
+
+
+    let totale_slides = document.querySelector('.totale_slides')
+    if (totale_slides) {
+        let count_slides = document.querySelectorAll('.swiper_main .swiper-slide')
+        
+        if (count_slides.length <= 9) {
+            totale_slides.innerHTML = '0' + count_slides.length
+        
+        }  else {
+            totale_slides.innerHTML =  count_slides.length
+        
+        }
+    }
+    
+
+
+    // let current_slide_number = document.querySelector('.swiper_main .swiper-pagination')
+    let current_slide = document.querySelector('.swiper_main .swiper-slide-active')
+    
+    console.log(current_slide);
+    console.log(current_slide.getAttribute('aria-label'));
+    let aria_label = current_slide.getAttribute('aria-label');
+    console.log(aria_label.split( '/ ')); 
+
+
+    // let current_slide = document.querySelector('.swiper_main .swiper-pagination-current')
+    // console.log(current_slide.innerHTML)
+    // let block_for_current_slide = document.querySelector('.swiper_main .swiper-pagination')
+    // if(current_slide) {
+
+    //     if (current_slide.innerHTML <= 9) {
+    //         block_for_current_slide.innerHTML = '0' + current_slide.innerHTML
+    
+    //     } else {
+    //         block_for_current_slide.innerHTML =  current_slide.innerHTML
+    //     }
+    // }
+
+    
