@@ -187,14 +187,18 @@ window.addEventListener("DOMContentLoaded", function() {
     }
     
 
-
-    // let current_slide_number = document.querySelector('.swiper_main .swiper-pagination')
-    let current_slide = document.querySelector('.swiper_main .swiper-slide-active')
     
-    console.log(current_slide);
-    console.log(current_slide.getAttribute('aria-label'));
-    let aria_label = current_slide.getAttribute('aria-label');
-    console.log(aria_label.split( '/ ')); 
+    
+    // var card = $(".card");
+    // var parent = card.parent();
+    // var fieldOfView = (innerWidth / innerHeight) * 16;
+
+    // $(document).on("mousemove", function (e) {
+    //     var ax = -(parent.width() * 0.5 - e.pageX) / fieldOfView;
+    //     var ay = (parent.height() * 0.5 - e.pageY) / fieldOfView;
+    //     card.css("transform", "rotateY(" + ax + "deg) rotateX(" + ay + "deg)");
+    // });
+
 
 
     // let current_slide = document.querySelector('.swiper_main .swiper-pagination-current')
@@ -210,4 +214,57 @@ window.addEventListener("DOMContentLoaded", function() {
     //     }
     // }
 
-    
+    const cards = document.querySelector(".screen1_img");
+// const images = document.querySelectorAll(".card__img");
+// const backgrounds = document.querySelectorAll(".card__bg");
+const range = 35;
+
+// const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
+const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
+
+let timeout;
+document.addEventListener('mousemove', ({x, y}) => {
+  if (timeout) {
+    window.cancelAnimationFrame(timeout);
+  }
+  	
+  timeout = window.requestAnimationFrame(() => {
+    const yValue = calcValue(y, window.innerHeight);
+    const xValue = calcValue(x, window.innerWidth);
+
+    cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+
+    // [].forEach.call(images, (image) => {
+    //   image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
+    // });
+
+    // [].forEach.call(backgrounds, (background) => {
+    //   background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
+    // })
+	})
+}, false);
+
+let tab_controls = document.querySelectorAll('#section2 .tab_control_item')
+let tab_contents = document.querySelectorAll('#section2 .tabs_content')
+
+if (tab_controls.length > 0) {
+
+  tab_controls.forEach((tab, index) => {
+   
+
+    tab.addEventListener('click', function(){
+
+
+     let active_content = document.querySelector('#section2 .tabs_content.show')
+     active_content.classList.remove('show')
+     tab_contents[index].classList.add('show')
+
+      // console.log(active_content, tab)
+    })
+
+  }
+  )
+
+
+
+}
