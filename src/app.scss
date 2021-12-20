@@ -2845,5 +2845,31 @@ line-height: toRem(89);
 color: #434040;
 margin-bottom: toRem(30);
     }
+    .wraper_map{
+        display: flex;
+
+
+
+        .contacts{
+            .title{
+                font-family: Josefin Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 39px;
+/* or 162% */
+
+
+color: #434040;
+margin-bottom: toRem(30);
+
+            }
+            .colored_txt_green{
+                color: #13AC6C;
+                font-weight: bold;
+            }
+
+        }
+    }
 
 }
