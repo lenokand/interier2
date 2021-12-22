@@ -221,3 +221,61 @@ if (tab_controls2.length > 0) {
       // console.log(active_content, tab)
     })}
   )}
+  
+
+
+  // отображение портфолио меню
+  let menuItemPortfolio = document.querySelector('menu .portfolio_item')
+  let menuRightArea = document.querySelector('.portfolio_right_block')
+  let menuPortfolioBack = document.querySelector('.portfolio_menu .button_back')
+    let bodyBlock = document.body
+    // console.log(bodyBlock);
+  menuItemPortfolio.addEventListener('click',  showBlock)
+  menuRightArea.addEventListener('click',  showBlock)
+  menuPortfolioBack.addEventListener('click',  showBlock)
+
+
+  function showBlock(){
+
+    // e.preventDefault()
+    let portfolioBlock = document.querySelector('.portfolio_menu')
+    portfolioBlock.classList.toggle('show')
+    menuItemPortfolio.classList.toggle('active')
+    bodyBlock.classList.toggle("menu_open")
+
+    // fullpage_api.destroy('all');
+
+    if(  portfolioBlock.classList.contains('show'))
+    {     
+      // fullpage_api.setAllowScrolling(false);
+      fullpage_api.destroy('all');
+      console.log(portfolioBlock.classList.contains('show'));
+
+    } else {
+      // fullpage_api.setAllowScrolling(true);
+      // fullpage_api.reBuild();
+      initializeFullPage()
+      console.log(portfolioBlock.classList.contains('show'));
+    }
+    // fullpage_api.setAllowScrolling(false);
+    
+
+  }
+
+
+  // переключение пунктов меню
+  
+  
+  
+
+  // курсор
+  const cursor = document.querySelector(".cursor"); // #1
+
+  const mouseMove = function (e) { // #2
+ let x = e.clientX;
+ let y = e.clientY;
+ cursor.style.left = x + "px";
+ cursor.style.top = y + "px";
+};
+
+ document.addEventListener("mousemove", mouseMove); // #3    

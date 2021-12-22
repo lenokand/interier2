@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <meta name="robots" content="noindex, nofollow" />
     <link rel="icon" type="image/x-icon" sizes="16x16" href="icons/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -56,10 +56,10 @@
                     <a href="" class="menu_item active">
                         О нас
                     </a>
-                    <a href="" class="menu_item">
+                    <div class="menu_item portfolio_item active">
                         Портфолио
 
-                    </a>
+                    </div>
                     <a href="" class="menu_item">
                         Услуги и цены
 
@@ -75,7 +75,7 @@
                 </menu>
                 <div class="social">
                     <a class="social_tel" href="tel:+7 (495) 104 85 95">+7 (495) 104 85 95</a>
-                    <a href="" class="callback_btn">
+                    <a href="#modal-call" data-fancybox data-touch="false" class="callback_btn">
                         Перезвоните мне!
                     </a>
                 </div>
@@ -84,7 +84,158 @@
         </div>
 
     </header>
+    <div class="portfolio_menu show">
+        <div class="portfolio_left_block">
+            <div class="left_wrapper">
+                <div class="portfolio_title">
 
+                    Примеры наших выполненных работ
+                </div>
+                <div class="portfolio_left_menu">
+                    <div class="portfolio_menu_item active ">
+                        <span class="active">
+                            <div class="pointer_des"></div>
+                            Дизайн интерьера
+                        </span>
+
+                        <div class="portfolio_submenu_block">
+                            <div class="portfolio_submenu_item">Квартира</div>
+                            <div class="portfolio_submenu_item">Дача</div>
+                            <div class="portfolio_submenu_item">Загородный дом</div>
+                            <div class="portfolio_submenu_item">Усадьба</div>
+                        </div>
+                    </div>
+                    <div class="portfolio_menu_item">
+                        <span>
+                            <div class="pointer_des"></div>
+                            Реализация
+                        </span>
+
+                    </div>
+                    <div class="portfolio_menu_item">
+                        <span>
+                            <div class="pointer_des"></div>
+                            Производство мебели
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="button_back">
+                <svg width="39" height="34" viewBox="0 0 39 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.92601 11.3334H27.3333C33.4084 11.3334 38.3333 16.2583 38.3333 22.3334C38.3333 28.4085 33.4084 33.3334 27.3333 33.3334H22.75V29.6667H27.3333C31.3834 29.6667 34.6666 26.3835 34.6666 22.3334C34.6666 18.2833 31.3834 15.0001 27.3333 15.0001H7.92601L15.7963 22.8704L13.2036 25.4631L0.907227 13.1667L13.2036 0.870361L15.7963 3.46309L7.92601 11.3334Z" />
+                </svg>
+
+                Назад
+            </div>
+
+        </div>
+        <div class="portfolio_center_block">
+
+            <div class="case_block design_block ">
+
+                <div class="case_category_block show">
+                    <div class="case_item">
+                        <img class="case_img" src="products/portf1.png" alt="">
+                        <div class="case_info">
+                            <div class="info_wrapper">
+                                <div class="project_name">
+                                    Название проекта
+                                </div>
+                                <div class="project_sign">
+                                    Ремонт квартиры на садовой
+                                </div>
+                                <div class="numbers_row">
+                                    <div class="numbers_col">
+                                        <div class="numbers_sign">
+                                            Площадь
+                                        </div>
+                                        <div class="numbers_number">
+                                            130м2
+                                        </div>
+                                    </div>
+                                    <div class="numbers_col">
+                                        <div class="numbers_sign">
+                                            Итоговая стоимость
+                                        </div>
+                                        <div class="numbers_number">
+                                            5200$
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <a href="" class="more_info">
+                                Подробнее о проекте
+                                <svg width="21" height="18" viewBox="0 0 21 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M16.5856 9.70711L-0.000151105 9.70711L-0.000151017 7.70711L16.5856 7.70711L10.2927 1.41421L11.707 -3.806e-07L20.4141 8.70711L11.707 17.4142L10.2927 16L16.5856 9.70711Z" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="case_item">
+                        <img src="products/portf1.png" alt="">
+                    </div>
+                    <div class="case_item">
+                        <img src="products/portf1.png" alt="">
+                    </div>
+                    <div class="case_item">
+                        <img src="products/portf1.png" alt="">
+                    </div>
+                    <div class="case_item">
+                        <img src="products/portf1.png" alt="">
+                    </div>
+                    <div class="case_item">
+                        <img src="products/portf1.png" alt="">
+                    </div>
+
+
+
+
+                </div>
+                <div class="case_category_block">
+                    <div class="case_item">
+                        <img src="products/portf1.png" alt="">
+                    </div>
+                </div>
+                <div class="case_category_block">
+                    <div class="case_item">
+                        <img src="products/portf1.png" alt="">
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="case_block realisation_block">
+                <div class="case_category_block ">
+                    <div class="case_item">
+                        realisation_block
+                    </div>
+                </div>
+
+            </div>
+            <div class="case_block furniture_block">
+                <div class="case_category_block ">
+                    <div class="case_item">
+                        furniture
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="portfolio_right_block">
+
+        </div>
+    </div>
 
     <div id="fullpage">
         <div class="section active" id="section0">
@@ -406,7 +557,7 @@
                         Реализованный
                     </div>
 
-                    <a href="" class="button_call">
+                    <a href="#modal-call" data-fancybox data-touch="false" class="button_call">
                         Консультация
                     </a>
                 </div>
@@ -526,9 +677,9 @@
                                         развития общества.</p>
                                 </div>
                                 <div class="bottom_wraper">
-                                    <div class="button_call">
+                                    <a href="#modal-call" data-fancybox data-touch="false" class="button_call">
                                         Задать вопрос
-                                    </div>
+                                    </a>
                                     <div class="coma_bottom">“</div>
                                 </div>
                                 <div class="sign">
@@ -571,9 +722,9 @@
                                         развития общества.</p>
                                 </div>
                                 <div class="bottom_wraper">
-                                    <div class="button_call">
+                                    <a href="#modal-call" data-fancybox data-touch="false" class="button_call">
                                         Задать вопрос
-                                    </div>
+                                    </a>
                                     <div class="coma_bottom">“</div>
                                 </div>
                                 <div class="sign">
@@ -616,9 +767,9 @@
                                         развития общества.</p>
                                 </div>
                                 <div class="bottom_wraper">
-                                    <div class="button_call">
+                                    <a href="#modal-call" data-fancybox data-touch="false" class="button_call">
                                         Задать вопрос
-                                    </div>
+                                    </a>
                                     <div class="coma_bottom">“</div>
                                 </div>
                                 <div class="sign">
@@ -665,7 +816,7 @@
                         срочную
                         потребность вывода текущих активов.
                     </div>
-                    <a href="#" class="button_call">
+                    <a href="#modal-call" data-fancybox data-touch="false" class="button_call">
                         О нас
                     </a>
                 </div>
@@ -1149,7 +1300,7 @@
 
 
         <div class="section" id="section6"
-            style="background-image: url(public/products/woman.png), url(public/products/sec_6_bg1.png) ;">
+            style="background-image: url(products/woman.png), url(products/sec_6_bg1.png) ;">
             <div class="darc_block">
 
             </div>
@@ -1161,7 +1312,7 @@
                     Узнайте какое решение будет приемлемо
                     для вас, ответив на вопросы нашего дизайнера.
                 </div>
-                <a href="" class="button_call">Пройти тест</a>
+                <a href="#modal-call" data-fancybox data-touch="false" class="button_call">Пройти тест</a>
 
             </div>
 
@@ -1217,7 +1368,8 @@
                             </div>
 
                         </div>
-                        <a href="" class="button_call">Получить консультацию</a>
+                        <a href="#modal-call" data-fancybox data-touch="false" class="button_call">Получить
+                            консультацию</a>
 
                     </div>
                     <div class="tabs_content">
@@ -1234,7 +1386,8 @@
                                 выявляет срочную потребность вывода текущих активов.
                             </div>
                         </div>
-                        <a href="" class="button_call">Получить консультацию</a>
+                        <a href="#modal-call" data-fancybox data-touch="false" class="button_call">Получить
+                            консультацию</a>
 
                     </div>
                     <div class="tabs_content ">
@@ -1251,7 +1404,8 @@
                                 выявляет срочную потребность вывода текущих активов.
                             </div>
                         </div>
-                        <a href="" class="button_call">Получить консультацию</a>
+                        <a href="#modal-call" data-fancybox data-touch="false" class="button_call">Получить
+                            консультацию</a>
 
                     </div>
 
@@ -1418,17 +1572,17 @@
                     </div>
                     <div class="info_row">
                         <div class="info_wrapper">
-                            <div class="info_item">Покажу развернутые 
+                            <div class="info_item">Покажу развернутые
                                 работы в близком вам стиле</div>
                             <div class="info_item">Дам рекомендации по зонированию и размещению мебели и техники</div>
                             <div class="info_item">Сделаю вариант планировочного решения</div>
                         </div>
-                        
+
                     </div>
-                    <a href="" class="button_call">Записаться на встречу</a>
+                    <a href="#modal-call" data-fancybox data-touch="false" class="button_call">Записаться на встречу</a>
                 </div>
             </div>
-           
+
         </div>
         <div class="section" id="section10">
             <div class="container">
@@ -1437,13 +1591,17 @@
                 </div>
                 <div class="wraper_map">
                     <div class="map">
-                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ua/maps/213/moscow/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Москва</a><a href="https://yandex.ua/maps/geo/moskva/53166393/?ll=37.646930%2C55.725146&utm_medium=mapframe&utm_source=maps&z=10.5" style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва — Яндекс.Карты</a><iframe src="https://yandex.ua/map-widget/v1/-/CCUeaGQSPC" width="100%" height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe></div>
+                        <a href="https://yandex.ua/maps/geo/moskva/53166393/?ll=37.646930%2C55.725146&utm_medium=mapframe&utm_source=maps&z=10.5"
+                            style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва —
+                            Яндекс.Карты</a><iframe src="https://yandex.ua/map-widget/v1/-/CCUye6bHSA" width="100%"
+                            height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+
                     </div>
                     <div class="contacts">
                         <div class="title">
                             Остались вопросы?
                             <br>
-                            <span class="colored_txt_green">Проконсультируем бесплатно!</span> 
+                            <span class="colored_txt_green">Проконсультируем бесплатно!</span>
 
                         </div>
                         <div class="contacts_info">
@@ -1451,15 +1609,15 @@
                                 <div class="sign">По телефону
                                 </div>
                                 <div class="text">
-                                 <a href="tel:8(499)433-05-50">  8 (499) 433-05-50</a>  <br>
-ежедневно с 9:00 до 22:00
+                                    <a href="tel:8(499)433-05-50"> 8 (499) 433-05-50</a> <br>
+                                    ежедневно с 9:00 до 22:00
                                 </div>
                             </div>
                             <div class="info_item">
                                 <div class="sign">По почте
                                 </div>
                                 <div class="text">
-                                 <a href="mailto:smeta@mastera-remonta.com">smeta@mastera-remonta.com</a>   
+                                    <a href="mailto:smeta@mastera-remonta.com">smeta@mastera-remonta.com</a>
                                 </div>
                             </div>
                             <div class="info_item">
@@ -1473,12 +1631,101 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
+            <footer>
+                <div class="container">
+                    <div class="footer_row">
+                        <a href="">
+                            <img src="products/logo_white.png" alt="">
+                        </a>
+
+                        <div class="menu">
+                            <a href="" class="menu_item"> О нас</a>
+                            <a href="" class="menu_item"> Портфолио
+                            </a>
+                            <a href="" class="menu_item">Услуги и цены
+                            </a>
+                            <a href="" class="menu_item">Как мы работаем
+                            </a>
+                            <a href="" class="menu_item">Контакты
+                            </a>
+                        </div>
+                        <div class="social">
+                            <a href="tel:+7 (495) 104 85 95" class="tel">+7 (495) 104 85 95</a>
+                            <a href="#modal-call" data-fancybox data-touch="false"
+                                class="button_call_footer">Перезвоните мне!</a>
+                        </div>
+                    </div>
+                    <div class="footer_row social_row">
+                        <div class="social_links">
+                            <a href="" class="social_item social_item_vk">
+                                <svg width="36" height="20" viewBox="0 0 36 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.5876 19.9771H19.743C19.743 19.9771 20.3717 19.8891 20.7309 19.5371C21.0453 19.2291 21.0453 18.613 21.0453 18.613C21.0453 18.613 21.0004 15.7969 22.3475 15.3568C23.6497 14.9608 25.3561 18.085 27.1523 19.2731C28.4994 20.1971 29.5322 19.9771 29.5322 19.9771L34.337 19.9331C34.337 19.9331 36.8517 19.8011 35.6392 17.865C35.5494 17.689 34.9657 16.4129 32.0918 13.8168C29.0832 11.0886 29.4873 11.5286 33.1246 6.77637C35.3249 3.91622 36.223 2.15612 35.9536 1.36407C35.6841 0.660036 34.0676 0.836046 34.0676 0.836046L28.679 0.880049C28.679 0.880049 28.2749 0.836046 27.9606 1.01206C27.6013 1.23207 27.4217 1.62809 27.4217 1.62809C27.4217 1.62809 26.5685 3.87221 25.4459 5.76432C23.0211 9.76854 22.0781 9.98855 21.6739 9.72454C20.7758 9.15251 21.0004 7.39241 21.0004 6.16034C21.0004 2.28813 21.5841 0.660036 19.8328 0.264014C19.2491 0.132007 18.8 0.0440024 17.3182 0C15.3873 0 13.7707 0 12.8277 0.440024C12.1991 0.748042 11.75 1.40808 12.0195 1.40808C12.3787 1.45208 13.187 1.62809 13.5911 2.20012C14.13 2.94816 14.13 4.57625 14.13 4.57625C14.13 4.57625 14.4443 9.15251 13.3666 9.72454C12.6481 10.1206 11.6602 9.32852 9.5048 5.67631C8.42709 3.82821 7.5739 1.7601 7.5739 1.7601C7.5739 1.7601 7.39428 1.36408 7.12485 1.18807C6.90033 1.01206 6.45129 0.880049 5.95734 0.880049L1.15255 0.924051C1.15255 0.924051 0.389173 0.924051 0.119745 1.27607C-0.149682 1.58409 0.119745 2.15612 0.119745 2.15612C0.119745 2.15612 4.16115 11.3526 8.69651 15.9729C12.8726 20.2851 17.5876 19.9771 17.5876 19.9771Z" />
+                                </svg>
+                            </a>
+                            <a href="" class="social_item social_item_inst ">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.1904 0H5.80969C2.60621 0 0 2.60621 0 5.80969V14.1903C0 17.3938 2.60621 20 5.80969 20H14.1903C17.3938 20 20 17.3938 20 14.1904V5.80969C20 2.60621 17.3938 0 14.1904 0ZM18.4375 14.1903C18.4375 16.5322 16.5322 18.4375 14.1904 18.4375H5.80969C3.46777 18.4375 1.5625 16.5322 1.5625 14.1904V5.80969C1.5625 3.46777 3.46777 1.5625 5.80969 1.5625H14.1903C16.5322 1.5625 18.4375 3.46777 18.4375 5.80969V14.1903Z" />
+                                    <path
+                                        d="M10 4.60938C7.02758 4.60938 4.60938 7.02758 4.60938 10C4.60938 12.9724 7.02758 15.3906 10 15.3906C12.9724 15.3906 15.3906 12.9724 15.3906 10C15.3906 7.02758 12.9724 4.60938 10 4.60938ZM10 13.8281C7.88918 13.8281 6.17188 12.1108 6.17188 10C6.17188 7.88918 7.88918 6.17188 10 6.17188C12.1108 6.17188 13.8281 7.88918 13.8281 10C13.8281 12.1108 12.1108 13.8281 10 13.8281Z" />
+                                    <path
+                                        d="M15.4688 5.3125C15.9002 5.3125 16.25 4.96272 16.25 4.53125C16.25 4.09978 15.9002 3.75 15.4688 3.75C15.0373 3.75 14.6875 4.09978 14.6875 4.53125C14.6875 4.96272 15.0373 5.3125 15.4688 5.3125Z" />
+                                </svg>
+
+                            </a>
+                            <a href="" class="social_item  social_item_fb">
+                                <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.06265 11.2891C2.98608 11.2891 1.30162 11.2891 0.535963 11.2891C0.12761 11.2891 0 11.1389 0 10.7635C0 9.7622 0 8.73592 0 7.73467C0 7.33417 0.153132 7.20901 0.535963 7.20901H3.06265C3.06265 7.13392 3.06265 5.6821 3.06265 5.00626C3.06265 4.00501 3.2413 3.05382 3.75174 2.17772C4.2877 1.2766 5.05336 0.675845 6.0232 0.325407C6.66125 0.100125 7.2993 0 7.9884 0H10.4896C10.8469 0 11 0.150188 11 0.500626V3.35419C11 3.70463 10.8469 3.85482 10.4896 3.85482C9.80046 3.85482 9.11137 3.85482 8.42227 3.87985C7.73318 3.87985 7.37587 4.20526 7.37587 4.90613C7.35035 5.65707 7.37587 6.38298 7.37587 7.15895H10.3364C10.7448 7.15895 10.8979 7.30914 10.8979 7.70964V10.7384C10.8979 11.1389 10.7703 11.2641 10.3364 11.2641C9.41763 11.2641 7.45244 11.2641 7.37587 11.2641V19.4243C7.37587 19.8498 7.24826 20 6.78886 20C5.71694 20 4.67053 20 3.59861 20C3.21578 20 3.06265 19.8498 3.06265 19.4743C3.06265 16.8461 3.06265 11.3642 3.06265 11.2891Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </footer>
         </div>
+        <!-- <div class="section" id="section11" style="height: 50wv;">
+           
+        </div> -->
 
 
     </div>
+    <div class="modals">
+        <div id="modal-call">
+            <div class="title">
+                Есть вопрос? <br>
+                Задайте его прямо сейчас!
+            </div>
+            <form action="" method="post">
+                <div class="sign">
+                    Как вас зовут?
+                </div>
+                <input type="text" placeholder="Имя">
+                <div class="sign">
+                    Как вас зовут?
+                </div>
+                <input class="tel" type="tel" placeholder="Телефон">
+
+                <button class="button_call">Отправить</button>
+
+                <div class="item">
+                    <input type="checkbox" id="check1">
+                    <label for="check1">Даю согласие <a href="">на обработку персональных данных</a></label>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+    <div class="cursor"></div>
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -1495,17 +1742,22 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script type="text/javascript">
-        var myFullpage = new fullpage('#fullpage', {
-            // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
-            navigation: true,
-            navigationPosition: 'left',
-            navigationTooltips: ['Главная', 'Второй блок', 'Третий ', 'Forth'],
-            fitToSection: false,
-            scrollingSpeed: 1000,
-            paddingTop: '110px'
-            // navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
+        function initializeFullPage() {
+            var myFullpage = new fullpage('#fullpage', {
+                // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+                navigation: true,
+                navigationPosition: 'left',
+                navigationTooltips: ['Главная', 'Второй блок', 'Третий ', 'Forth'],
+                fitToSection: false,
+                scrollingSpeed: 1000,
+                paddingTop: '110px',
+                responsiveHeight: 800
+                // navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
 
-        });
+            });
+
+        }
+        initializeFullPage()
 
 
         var swiper_main = new Swiper(".swiper_main", {
