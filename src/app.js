@@ -246,26 +246,128 @@ if (tab_controls2.length > 0) {
     // fullpage_api.destroy('all');
 
     if(  portfolioBlock.classList.contains('show'))
-    {     
+    {
       // fullpage_api.setAllowScrolling(false);
       fullpage_api.destroy('all');
-      console.log(portfolioBlock.classList.contains('show'));
+      // console.log(portfolioBlock.classList.contains('show'));
 
     } else {
       // fullpage_api.setAllowScrolling(true);
       // fullpage_api.reBuild();
       initializeFullPage()
-      console.log(portfolioBlock.classList.contains('show'));
+      // console.log(portfolioBlock.classList.contains('show'));
     }
     // fullpage_api.setAllowScrolling(false);
     
 
   }
 
+  let listOfDisignTab = document.querySelectorAll('.portfolio_left_menu .portfolio_submenu_item')
+  let listOfDisignBlock = document.querySelectorAll('.portfolio_center_block .case_category_block')
+ 
+
+  listOfDisignTab.forEach((tab, index) => {
+    tab.addEventListener("click", function(){
+
+        let ac_tab = document.querySelector('.portfolio_left_menu .portfolio_submenu_item.show')
+        if (ac_tab) {
+          ac_tab.classList.remove('show')
+        }
+        listOfDisignTab[index].classList.add('show')
+
+        let ac_block = document.querySelector('.portfolio_center_block .case_category_block.show')
+        
+        if (ac_block) {
+          ac_block.classList.remove('show')
+        }
+        listOfDisignBlock[index].classList.add('show')
+    })
+  
+  } )
+
+let portfolioMenuItem = document.querySelectorAll('.portfolio_menu_item span')
+
+
+
+portfolioMenuItem.forEach((item, index) => {
+  
+  item.addEventListener('click', function(){
+
+  // console.log(item.parentElement.classList.contains('active'));
+
+    if (item.parentElement.classList.contains('active')){
+      item.parentElement.classList.remove('active')
+    } else {
+      let ac_menu = document.querySelector('.portfolio_menu_item.active')
+
+    
+
+      if (ac_menu) {
+        ac_menu.classList.remove('active')
+      }
+  
+  
+      item.parentElement.classList.add('active')
+    }
+
+  
+    
+
+  })
+
+}
+
+)
 
   // переключение пунктов меню
+  // пункты раздела дизайн интерьера
+  // let listOfDisignTab = document.querySelectorAll('.design_tab .portfolio_submenu_item')
+  // let listOfDisignBlock = document.querySelectorAll('.design_block .case_category_block')
+
+  // listOfDisignTab.forEach((tab, index) => {
+  //   tab.addEventListener("click", function(){
+
+  //       let ac_tab = document.querySelector('.design_tab .portfolio_submenu_item.show')
+  //       if (ac_tab) {
+  //         ac_tab.classList.remove('show')
+  //       }
+  //       listOfDisignTab[index].classList.add('show')
+
+  //       let ac_block = document.querySelector('.design_block .case_category_block.show')
+  //       // console.log(ac_block);
+  //       if (ac_block) {
+  //         ac_block.classList.remove('show')
+  //       }
+  //       listOfDisignBlock[index].classList.add('show')
+  //   })
   
+  // } )
+  // пункты раздела реализация furniture_tab
+  // let listOfRealisationTab = document.querySelectorAll('.realisation_tab .portfolio_submenu_item')
+  // let listOfRealisationBlock = document.querySelectorAll('.realisation_block .case_category_block')
+
+  // listOfRealisationTab.forEach((tab, index) => {
+  //   tab.addEventListener("click", function(){
+
+  //       let ac_tab = document.querySelector('.realisation_tab .portfolio_submenu_item.show')
+  //       if (ac_tab) {
+  //         ac_tab.classList.remove('show')
+  //       }
+  //       listOfRealisationTab[index].classList.add('show')
+
+  //       let ac_block = document.querySelector('.realisation_block .case_category_block.show')
+  //       // console.log(ac_block);
+  //       if (ac_block) {
+  //         ac_block.classList.remove('show')
+  //       }
+  //       listOfRealisationBlock[index].classList.add('show')
+  //   })
   
+  // } )
+
+
+
+
   
 
   // курсор

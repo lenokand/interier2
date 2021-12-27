@@ -32,11 +32,16 @@ module.exports = {
             template: './src/html/index.html',
             inject: 'body'
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: 'cart.html',
-        //     template: './src/html/cart.html',
-        //     inject: 'body'
-        // })
+        new HtmlWebpackPlugin({
+            filename: 'service_design.html',
+            template: './src/html/service_design.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: './src/html/about.html',
+            inject: 'body'
+        })
     ],
     module: {
         rules: [
