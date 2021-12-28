@@ -142,7 +142,7 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
 
-// табы
+// табы на главной
 
 let tab_controls = document.querySelectorAll('#section2 .tab_control_item')
 let tab_contents = document.querySelectorAll('#section2 .tabs_content')
@@ -377,7 +377,41 @@ contactTabList.forEach((tab, index) => {
 
 })
 
+//  табы для цен
 
+let priceTabList = document.querySelectorAll('.price_block_service .price_service_item')
+let priceInnerList = document.querySelectorAll('.price_block_table .price_table_item')
+
+priceTabList.forEach((tab, index) => {
+  tab.addEventListener('click', function(){
+
+    // console.log(item.parentElement.classList.contains('active'));
+ 
+        let pr_tab = document.querySelector('.price_block_service .price_service_item.active')
+          if (pr_tab) {
+          pr_tab.classList.remove('active')
+     
+    
+    
+        tab.classList.add('active')
+      }
+        let pr_block = document.querySelector('.price_block_table .price_table_item.active')
+          if (pr_tab) {
+          pr_block.classList.remove('active')
+     
+    
+    
+          priceInnerList[index].classList.add('active')
+      }
+
+
+  
+    
+      
+  
+    })
+
+})
 
 
 
@@ -443,3 +477,10 @@ contactTabList.forEach((tab, index) => {
 
 
 
+ const icons = document.querySelectorAll('.burger');
+ icons.forEach (icon => {  
+   icon.addEventListener('click', (event) => {
+     icon.classList.toggle("open");
+   });
+ });
+ 
