@@ -136,45 +136,8 @@ window.addEventListener("DOMContentLoaded", function() {
     //     }
     // }
 
-    // паралакс картинки
+ 
 
-    const cards = document.querySelector(".screen1_img");
-    const cards7 = document.querySelectorAll(".screen7_img");
-// const images = document.querySelectorAll(".card__img");
-// const backgrounds = document.querySelectorAll(".card__bg");
-const range = 35;
-
-// const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
-const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
-
-let timeout;
-document.addEventListener('mousemove', ({x, y}) => {
-  if (timeout) {
-    window.cancelAnimationFrame(timeout);
-  }
-  	
-  timeout = window.requestAnimationFrame(() => {
-    const yValue = calcValue(y, window.innerHeight);
-    const xValue = calcValue(x, window.innerWidth);
-
-    cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
-    cards7.forEach( (card) => {
-   
-      card.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
-    })
-
-    
-    // cards2.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
-
-    // [].forEach.call(images, (image) => {
-    //   image.style.transform = `translateX(${-xValue}px) translateY(${yValue}px)`;
-    // });
-
-    // [].forEach.call(backgrounds, (background) => {
-    //   background.style.backgroundPosition = `${xValue*.45}px ${-yValue*.45}px`;
-    // })
-	})
-}, false);
 
 
 
@@ -265,25 +228,28 @@ if (tab_controls2.length > 0) {
   let listOfDisignTab = document.querySelectorAll('.portfolio_left_menu .portfolio_submenu_item')
   let listOfDisignBlock = document.querySelectorAll('.portfolio_center_block .case_category_block')
  
-
-  listOfDisignTab.forEach((tab, index) => {
-    tab.addEventListener("click", function(){
-
-        let ac_tab = document.querySelector('.portfolio_left_menu .portfolio_submenu_item.show')
-        if (ac_tab) {
-          ac_tab.classList.remove('show')
-        }
-        listOfDisignTab[index].classList.add('show')
-
-        let ac_block = document.querySelector('.portfolio_center_block .case_category_block.show')
-        
-        if (ac_block) {
-          ac_block.classList.remove('show')
-        }
-        listOfDisignBlock[index].classList.add('show')
-    })
+  if(listOfDisignTab.length > 0){
+    listOfDisignTab.forEach((tab, index) => {
+      tab.addEventListener("click", function(){
   
-  } )
+          let ac_tab = document.querySelector('.portfolio_left_menu .portfolio_submenu_item.show')
+          if (ac_tab) {
+            ac_tab.classList.remove('show')
+          }
+          listOfDisignTab[index].classList.add('show')
+  
+          let ac_block = document.querySelector('.portfolio_center_block .case_category_block.show')
+          
+          if (ac_block) {
+            ac_block.classList.remove('show')
+          }
+          listOfDisignBlock[index].classList.add('show')
+      })
+    
+    } )
+  }
+
+  
 
 let portfolioMenuItem = document.querySelectorAll('.portfolio_menu_item span')
 
@@ -370,14 +336,110 @@ portfolioMenuItem.forEach((item, index) => {
 
   
 
+
+
+
+
+
+
+//  табы для контактов
+
+let contactTabList = document.querySelectorAll('.contact_info_block .contact_tab_item')
+let contactInnerList = document.querySelectorAll('.contact_info_block .contact_inner_item')
+contactTabList.forEach((tab, index) => {
+  tab.addEventListener('click', function(){
+
+    // console.log(item.parentElement.classList.contains('active'));
+ 
+        let ac_tab = document.querySelector('.contact_info_block .contact_tab_item.active')
+          if (ac_tab) {
+          ac_tab.classList.remove('active')
+     
+    
+    
+        tab.classList.add('active')
+      }
+        let ac_block = document.querySelector('.contact_info_block .contact_inner_item.active')
+          if (ac_tab) {
+          ac_block.classList.remove('active')
+     
+    
+    
+          contactInnerList[index].classList.add('active')
+      }
+
+
+  
+    
+      
+  
+    })
+
+})
+
+
+
+
+
   // курсор
   const cursor = document.querySelector(".cursor"); // #1
+  if(cursor){
+    const mouseMove = function (e) { // #2
+      let x = e.clientX;
+      let y = e.clientY;
+      cursor.style.left = x + "px";
+      cursor.style.top = y + "px";
+     };
+     document.addEventListener("mousemove", mouseMove); // #3    
+  }
 
-  const mouseMove = function (e) { // #2
- let x = e.clientX;
- let y = e.clientY;
- cursor.style.left = x + "px";
- cursor.style.top = y + "px";
-};
 
- document.addEventListener("mousemove", mouseMove); // #3    
+
+
+     // паралакс картинки
+
+     const cards = document.querySelector(".screen1_img");
+     const cards7 = document.querySelectorAll(".screen7_img");
+ // const images = document.querySelectorAll(".card__img");
+ // const backgrounds = document.querySelectorAll(".card__bg");
+ if(cards !== null || cards7 !== null){
+
+   const range = 35;
+ 
+   // const calcValue = (a, b) => (((a * 100) / b) * (range / 100) -(range / 2)).toFixed(1);
+   const calcValue = (a, b) => (a/b*range-range/2).toFixed(1) // thanks @alice-mx
+   
+   let timeout;
+   document.addEventListener('mousemove', ({x, y}) => {
+     if (timeout) {
+       window.cancelAnimationFrame(timeout);
+     }
+       
+     timeout = window.requestAnimationFrame(() => {
+       const yValue = calcValue(y, window.innerHeight);
+       const xValue = calcValue(x, window.innerWidth);
+   
+       if(cards){
+        
+        cards.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;  
+       }
+       if(cards7){
+        
+        cards7.forEach( (card) => {
+      
+         card.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+       })
+       }
+       
+       
+      
+     })
+   }, false);
+ }
+
+
+
+
+
+
+
