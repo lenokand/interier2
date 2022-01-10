@@ -10,6 +10,9 @@
     <link rel="icon" type="image/x-icon" sizes="16x16" href="icons/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
     <!-- <link rel="stylesheet" href="dist/fullpage.css"> -->
     <link rel="stylesheet" href="bundle.css">
 </head>
@@ -64,7 +67,7 @@
                         Услуги и цены
 
                     </a>
-                    <a href="" class="menu_item">
+                    <a href="works.html" class="menu_item">
                         Как мы работаем
 
                     </a>
@@ -75,7 +78,7 @@
                 </menu>
                 <div class="social">
                     <a class="social_tel" href="tel:+7 (495) 104 85 95">+7 (495) 104 85 95</a>
-                    <a href="#modal-call" data-fancybox data-touch="false" class="callback_btn">
+                    <a href="#modal-call-time" data-fancybox="modal-call-time" class="callback_btn">
                         Перезвоните мне!
                     </a>
                 </div>
@@ -113,7 +116,7 @@
                         <div class="portfolio_submenu_block">
                             <div class="portfolio_submenu_item ">Подпункт</div>
                             <div class="portfolio_submenu_item">Подпункт</div>
-                          
+
                         </div>
 
                     </div>
@@ -125,7 +128,7 @@
                         <div class="portfolio_submenu_block">
                             <div class="portfolio_submenu_item ">Подпункт</div>
                             <div class="portfolio_submenu_item">Подпункт</div>
-                          
+
                         </div>
 
                     </div>
@@ -358,7 +361,7 @@
                             </a>
                         </div>
                     </div>
-                   
+
 
 
                 </div>
@@ -630,7 +633,10 @@
                             </svg>
 
                         </div>
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination-custom">
+
+
+                        </div>
                         <div class="swiper-button-next">
                             <svg width="13" height="23" viewBox="0 0 13 23" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1783,8 +1789,8 @@
                         <!-- <a href="https://yandex.ua/maps/geo/moskva/53166393/?ll=37.646930%2C55.725146&utm_medium=mapframe&utm_source=maps&z=10.5"
                             style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва —
                             Яндекс.Карты</a> -->
-                            <iframe src="https://yandex.ua/map-widget/v1/-/CCUye6bHSA" width="100%"
-                            height="100%" frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
+                        <iframe src="https://yandex.ua/map-widget/v1/-/CCUye6bHSA" width="100%" height="100%"
+                            frameborder="0" allowfullscreen="true" style="position:relative;"></iframe>
 
                     </div>
                     <div class="contacts">
@@ -1836,7 +1842,7 @@
                             </a>
                             <a href="price.html" class="menu_item">Услуги и цены
                             </a>
-                            <a href="" class="menu_item">Как мы работаем
+                            <a href="works.html" class="menu_item">Как мы работаем
                             </a>
                             <a href="" class="menu_item">Контакты
                             </a>
@@ -1898,9 +1904,10 @@
                 <div class="sign">
                     Как вас зовут?
                 </div>
+
                 <input type="text" placeholder="Имя">
                 <div class="sign">
-                    Как вас зовут?
+                    Номер телефона
                 </div>
                 <input class="tel" type="tel" placeholder="Телефон">
 
@@ -1914,15 +1921,52 @@
 
             </form>
         </div>
+        <div id="modal-call-time">
+            <div class="title">
+                В <span class="colored_txt_green"> какое время </span>удобнее будет что бы мы позвонили вам?
+
+            </div>
+            <form action="" method="post">
+                <div class="time">
+                    <input type="text" class="js-range-slider" name="my_range" />
+                    <div class="range_block">
+                        <input type="text" name="" id="input-from">
+                        -
+                        <input type="text" name="" id="input-to">
+                    </div>
+                </div>
+
+
+                <div class="sign">
+                    Как вас зовут?
+                </div>
+                <input type="text" placeholder="Имя">
+                <div class="sign">
+                    Номер телефона
+                </div>
+                <input class="tel" type="tel" placeholder="Телефон">
+
+                <button class="button_call">Отправить</button>
+
+                <div class="item">
+                    <input type="checkbox" id="check12">
+                    <label for="check12">Даю согласие <a href="">на обработку персональных данных</a></label>
+                </div>
+
+
+            </form>
+        </div>
     </div>
     <!-- <div class="cursor"></div> -->
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.com/libraries/fullPage.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
 
     <!-- <script src="../dist/fullpage.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
@@ -1930,6 +1974,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
 
     <script type="text/javascript">
         function initializeFullPage() {
@@ -1999,9 +2045,9 @@
             // scrollbar: {
             //     el: '.swiper-scrollbar',
             // },
-            autoplay: {
-                delay: 9000,
-            },
+            // autoplay: {
+            //     delay: 9000,
+            // },
         });
 
         // 3 экран
@@ -2058,7 +2104,7 @@
             // slidesPerView: "auto",
             // centeredSlides: true,
             loop: true,
-            freeMode: true,
+            // freeMode: true,
             grabCursor: true,
             navigation: {
                 nextEl: ".swiper-button-next",
@@ -2086,13 +2132,44 @@
             // console.log(current_slide.getAttribute('aria-label'));
             let aria_label = current_slide.getAttribute('aria-label');
             aria_label_obj = aria_label.split('/ ')
-            let current_slide_number = document.querySelector('.swiper_main .swiper-pagination')
+            let current_slide_number = document.querySelector('.swiper_main .swiper-pagination-custom')
 
             if (aria_label_obj[0] <= 9) {
-                current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
+                // current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
+                current_slide_number.innerHTML =
+                    `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
+
+
+                const styleRoot = document.getElementById("change_num");
+               
+                let numbers = aria_label_obj[0]
+                function setNumberPercent(numbers) {
+                    let numberBottom;
+                    for (i in numbers) {
+                        switch (numbers[i]) {
+                          
+                            case "1":
+                                numberBottom = "translateY(0px)";
+                                break;
+                            case "2":
+                                numberBottom = "translateY(-4.375rem)";
+                                break;
+                            case "3":
+                                numberBottom = "translateY(-8.75rem)";
+                                break;
+
+                        }
+                       
+                        styleRoot.style.transform = numberBottom;
+                    }
+                }
+                setNumberPercent(numbers)
+
+
+
 
             } else {
-                current_slide_number.innerHTML = aria_label_obj[0]
+                // current_slide_number.innerHTML = aria_label_obj[0]
             }
             // изменение превью следующего слайда
             // находим все меняющиеся блоки в превьюхе
@@ -2121,8 +2198,26 @@
 
 
             if (slide_massive_number == slide_blocks.length) {
-                preveiw_block.style.display = "none"
-                // console.log('111111');
+                // preveiw_block.style.display = "none"
+                let slide_massive_number = aria_label_obj[0]
+                // console.log(slide_massive_number, slide_blocks.length)
+
+
+                let slide_block = slide_blocks[slide_massive_number]
+                if (slide_block) {
+                    let slide_number = slide_block.querySelector('.slider_counts .number')
+                    let slide_sign = slide_block.querySelector('.slider_counts')
+
+
+                    preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
+                    //   console.log(slide_block.style.backgroundImage)
+                    //   console.log(preveiw_number.innerHTML)
+                    preveiw_number.innerHTML = slide_number.innerHTML
+                }
+
+                
+
+
             } else {
                 preveiw_block.style.display = "flex"
             }
@@ -2137,6 +2232,8 @@
 
 
         })
+
+        // $(".js-range-slider").ionRangeSlider();
     </script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
 </body>

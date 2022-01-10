@@ -29,9 +29,11 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "@fancyapps/ui": "^4.0.16",
     "bootstrap": "^5.0.0-beta2",
     "bootstrap-icons": "^1.4.0",
     "fullpage.js": "^3.1.2",
+    "ion-rangeslider": "^2.3.1",
     "swiper": "^7.3.1"
   }
 }

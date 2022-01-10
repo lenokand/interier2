@@ -1,9 +1,10 @@
-
+// import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
   // import Swiper JS
   import Swiper, { Navigation, Pagination } from 'swiper';
   import 'swiper/css/navigation';
   import 'swiper/css/pagination';
+  // import '@fancyapps/ui/dist/fancybox.umd.js';
 
 
 // configure Swiper to use modules
@@ -484,3 +485,62 @@ priceTabList.forEach((tab, index) => {
    });
  });
  
+
+
+
+ let inputTo = document.querySelector("#input-to")
+ let inputFrom = document.querySelector("#input-from")
+ $(".js-range-slider").ionRangeSlider({
+    
+         skin: "round",
+         type: "double",
+         min: 0,
+         max: 24,
+         from: 9,
+         to: 13,
+         step: 1,
+         postfix:":00",
+         grid: false,             // show/hide grid
+         force_edges: false,     // force UI in the box
+         hide_min_max: true,    // show/hide MIN and MAX labels
+         // hide_from_to: true,    // show/hide FROM and TO labels
+         block: false,            // block instance from changing
+         onStart: function (data) {
+            
+             inputTo.value = data.to
+             inputFrom.value = data.from
+             
+             },
+             onChange: function (data) {
+            
+             inputTo.value = data.to
+             inputFrom.value = data.from
+            
+             },
+         
+             }); 
+
+             const filterGallary = Fancybox.bind('[data-fancybox="modal-call-time"]', {
+              // closeButton: "top",
+              dragToClose: false,
+              // Thumbs: false,
+              // Carousel: {
+              //     Dots: false,
+              // },
+          });
+          //    const filterGallary = Fancybox.bind('[data-fancybox="modal-call"]', {
+          //     // closeButton: "top",
+          //     dragToClose: false,
+          //     // Thumbs: false,
+          //     // Carousel: {
+          //     //     Dots: false,
+          //     // },
+          // });
+             const filterGallary2 = Fancybox.bind('[href="#modal-call"]', {
+              // closeButton: "top",
+              dragToClose: false,
+              // Thumbs: false,
+              // Carousel: {
+              //     Dots: false,
+              // },
+          });
