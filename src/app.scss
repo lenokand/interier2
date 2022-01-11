@@ -5606,7 +5606,17 @@ tbody {
 
 .quiz {
     margin-top: toRem(22);
-
+    position: relative;
+    .darc_block {
+        position: absolute;
+        right: 0;
+        top: toRem(200);
+        bottom: 0;
+        background: linear-gradient(94.74deg, #1D1818 9.1%, #343131 98.42%);
+        width: toRem(948);
+        height: 100%;
+        z-index: -1;
+    }
     .title {
         max-width: toRem(980);
         margin: auto;
@@ -5891,6 +5901,49 @@ tbody {
 
         }
         
+    }
+
+
+    .container:last-child {
+        display: flex;
+        align-items: center;
+
+        .left_block {
+            width: 55%;
+
+            .title {
+                font-family: Yeseva One;
+                font-style: normal;
+                font-weight: normal;
+                font-size: toRem(55);
+                line-height: toRem(89);
+                color: #434040;
+                margin-bottom: toRem(26);
+                text-align: start;
+            }
+
+            .subtitle {
+                font-family: Josefin Sans;
+                font-style: normal;
+                font-weight: 300;
+                font-size: toRem(19);
+                line-height: toRem(31);
+                color: #434040;
+                margin-bottom: toRem(60);
+                width: 75%;
+                text-align: start;
+                margin-left: 0;
+            }
+
+
+        }
+
+        .right_block {
+            padding-top: toRem(30);
+            width: 45%;
+            display: flex;
+            align-items: flex-start;
+        }
     }
 
 }
