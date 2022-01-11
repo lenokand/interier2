@@ -546,7 +546,7 @@
                             <div class="slide_main_info">
                                 <div class="title">
                                     <span class="color_letter">Д</span>изайн
-                                    <span class="title_gap">интерьера</span>
+                                    <span class="title_gap">интерьера3</span>
                                 </div>
                                 <div class="subtitle">
                                     Являясь всего лишь частью общей картины, реплицированные с зарубежных источников,
@@ -564,7 +564,7 @@
                             </div>
                             <div class="slider_counts">
                                 <span class="number">
-                                    128
+                                    129
                                 </span>
                                 решений
 
@@ -580,47 +580,7 @@
 
 
                     </div>
-                    <div class="swiper-slide" style="background-image: url('products/main_screen2.png');">
-                        <div class="container">
-
-                            <div class="slide_main_info">
-                                <div class="title">
-                                    <span class="color_letter">Д</span>изайн
-                                    <span class="title_gap">интерьера2</span>
-                                </div>
-                                <div class="subtitle">
-                                    Являясь всего лишь частью общей картины, реплицированные с зарубежных источников,
-                                    современные исследования.
-                                </div>
-                                <a href="" class="serv_link">
-                                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M16.4577 20.0138L29.828 6.70514V15.0737H33.4947V0.474609H18.828V4.12437H27.2353L13.865 17.433L16.4577 20.0138ZM29.8333 29.6727V20.5483H26.1667V29.6727H4.16667V7.77413H13.3333V4.12437H4.16667C2.14162 4.12437 0.5 5.75843 0.5 7.77413V29.6727C0.5 31.6884 2.14162 33.3225 4.16667 33.3225H26.1667C28.1917 33.3225 29.8333 31.6884 29.8333 29.6727Z" />
-                                    </svg>
-
-                                    Перейти
-                                </a>
-                            </div>
-                            <div class="slider_counts">
-                                <span class="number">
-                                    105
-                                </span>
-                                решений
-
-                            </div>
-
-
-                        </div>
-
-
-
-
-
-
-
-                    </div>
-
+                   
                 </div>
                 <div class="swiper_pagination_block">
 
@@ -633,10 +593,12 @@
                             </svg>
 
                         </div>
+
                         <div class="swiper-pagination-custom">
 
 
                         </div>
+
                         <div class="swiper-button-next">
                             <svg width="13" height="23" viewBox="0 0 13 23" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -647,15 +609,21 @@
                         </div>
                     </div>
 
-                    <div class="totale_slides">
-
+                    <div class="totale_slides_custom">
+03
                     </div>
 
-                    <!-- If we need scrollbar -->
-                    <div class="swiper-scrollbar"></div>
+                   
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                    <div class="swiper-scrollbar-custom">
+                        <span class="swiper-scrollbar-custom-fill animated" style=" transition-duration: 900ms;">
+                        
+                        </span>
+                    </div>
                 </div>
                 <div class="container">
                     <div class="social_block">
+                      
                         <a href="" class="social_item social_item_vk">
                             <svg width="36" height="20" viewBox="0 0 36 20" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -1999,7 +1967,8 @@
         var swiper_main = new Swiper(".swiper_main", {
             spaceBetween: 30,
             effect: "fade",
-            speed: 900,
+            speed: 800,
+            loop: true,
             fadeEffect: {
                 // crossFade: true
             },
@@ -2045,16 +2014,16 @@
             // scrollbar: {
             //     el: '.swiper-scrollbar',
             // },
-            // autoplay: {
-            //     delay: 9000,
-            // },
+            autoplay: {
+                delay: 8700,
+            },
         });
 
         // 3 экран
         var swiper_disigner = new Swiper(".swiper_disigner", {
             spaceBetween: 30,
             effect: "fade",
-            speed: 900,
+            // speed: 900,
             // fadeEffect: {
             //     // crossFade: true
             // },
@@ -2124,7 +2093,11 @@
         });
 
         let preveiw_block = document.querySelector('.swiper_main .preview_block')
-
+        let current_slide_number = document.querySelector('.swiper-pagination-custom')
+        if(current_slide_number) {
+            current_slide_number.innerHTML =
+                    `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
+        }
         function currentSlide() {
             let current_slide = document.querySelector('.swiper_main .swiper-slide-visible')
 
@@ -2132,12 +2105,12 @@
             // console.log(current_slide.getAttribute('aria-label'));
             let aria_label = current_slide.getAttribute('aria-label');
             aria_label_obj = aria_label.split('/ ')
-            let current_slide_number = document.querySelector('.swiper_main .swiper-pagination-custom')
+            
 
             if (aria_label_obj[0] <= 9) {
                 // current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
-                current_slide_number.innerHTML =
-                    `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
+                next_slide_number = +aria_label_obj[0]
+               
 
 
                 const styleRoot = document.getElementById("change_num");
@@ -2180,8 +2153,9 @@
 
             // 
             let slide_blocks = document.querySelectorAll('.swiper_main .swiper-slide')
-            let slide_massive_number = +aria_label_obj[0]
-            // console.log(slide_massive_number, slide_blocks.length)
+            let slide_massive_number = +aria_label_obj[0]+1
+
+            console.log(slide_massive_number, slide_blocks.length)
 
 
             let slide_block = slide_blocks[slide_massive_number]
@@ -2221,6 +2195,22 @@
             } else {
                 preveiw_block.style.display = "flex"
             }
+            // полоса состояния
+            let progress_bar = document.querySelector(".swiper-scrollbar-custom-fill")
+
+            if(progress_bar.classList.contains('animated')){
+                progress_bar.classList.remove('animated')
+                // console.log(111);
+                progress_bar.classList.add('animated2')
+            } else 
+            {
+                progress_bar.classList.remove('animated2')
+                // console.log(112);
+                progress_bar.classList.add('animated')
+            }
+            
+
+
         }
         currentSlide()
 

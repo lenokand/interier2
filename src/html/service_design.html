@@ -10,11 +10,14 @@
     <link rel="icon" type="image/x-icon" sizes="16x16" href="icons/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+
     <!-- <link rel="stylesheet" href="dist/fullpage.css"> -->
     <link rel="stylesheet" href="bundle.css">
 </head>
 
-<body class="fp-viewing-0">
+<body class="fp-viewing-0 ">
     <header>
         <div class="top_row">
             <div class="container">
@@ -48,19 +51,19 @@
         </div>
         <div class="bottom_row">
             <div class="container">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <img src="products/logo.svg" class="darc_fon" alt="">
                     <img src="products/logo_dark.svg" class="light_fon" alt="">
                 </a>
                 <menu>
-                    <a href="about.html" class="menu_item active">
+                    <a href="about.html" class="menu_item ">
                         О нас
                     </a>
                     <div class="menu_item portfolio_item ">
                         Портфолио
 
                     </div>
-                    <a href="" class="menu_item">
+                    <a href="price.html" class="menu_item">
                         Услуги и цены
 
                     </a>
@@ -75,13 +78,11 @@
                 </menu>
                 <div class="social">
                     <a class="social_tel" href="tel:+7 (495) 104 85 95">+7 (495) 104 85 95</a>
-                    <a href="#modal-call-time" data-fancybox data-touch="false" class="callback_btn">
+                    <a href="#modal-call-time" data-fancybox="modal-call-time" class="callback_btn">
                         Перезвоните мне!
                     </a>
                 </div>
             </div>
-
-        </div>
 
     </header>
     <div class="portfolio_menu ">
@@ -425,18 +426,208 @@
 
         </div>
     </div>
+    <div class="service_main" style="background-image: url('products/main_screen2.png'); ">
+        <div class="container">
+            <div class="social_block">
+                      
+                <a href="" class="social_item social_item_vk">
+                    <svg width="36" height="20" viewBox="0 0 36 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M17.5876 19.9771H19.743C19.743 19.9771 20.3717 19.8891 20.7309 19.5371C21.0453 19.2291 21.0453 18.613 21.0453 18.613C21.0453 18.613 21.0004 15.7969 22.3475 15.3568C23.6497 14.9608 25.3561 18.085 27.1523 19.2731C28.4994 20.1971 29.5322 19.9771 29.5322 19.9771L34.337 19.9331C34.337 19.9331 36.8517 19.8011 35.6392 17.865C35.5494 17.689 34.9657 16.4129 32.0918 13.8168C29.0832 11.0886 29.4873 11.5286 33.1246 6.77637C35.3249 3.91622 36.223 2.15612 35.9536 1.36407C35.6841 0.660036 34.0676 0.836046 34.0676 0.836046L28.679 0.880049C28.679 0.880049 28.2749 0.836046 27.9606 1.01206C27.6013 1.23207 27.4217 1.62809 27.4217 1.62809C27.4217 1.62809 26.5685 3.87221 25.4459 5.76432C23.0211 9.76854 22.0781 9.98855 21.6739 9.72454C20.7758 9.15251 21.0004 7.39241 21.0004 6.16034C21.0004 2.28813 21.5841 0.660036 19.8328 0.264014C19.2491 0.132007 18.8 0.0440024 17.3182 0C15.3873 0 13.7707 0 12.8277 0.440024C12.1991 0.748042 11.75 1.40808 12.0195 1.40808C12.3787 1.45208 13.187 1.62809 13.5911 2.20012C14.13 2.94816 14.13 4.57625 14.13 4.57625C14.13 4.57625 14.4443 9.15251 13.3666 9.72454C12.6481 10.1206 11.6602 9.32852 9.5048 5.67631C8.42709 3.82821 7.5739 1.7601 7.5739 1.7601C7.5739 1.7601 7.39428 1.36408 7.12485 1.18807C6.90033 1.01206 6.45129 0.880049 5.95734 0.880049L1.15255 0.924051C1.15255 0.924051 0.389173 0.924051 0.119745 1.27607C-0.149682 1.58409 0.119745 2.15612 0.119745 2.15612C0.119745 2.15612 4.16115 11.3526 8.69651 15.9729C12.8726 20.2851 17.5876 19.9771 17.5876 19.9771Z" />
+                    </svg>
+
+                </a>
+                <a href="" class="social_item social_item_inst">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14.1904 0H5.80969C2.60621 0 0 2.60621 0 5.80969V14.1903C0 17.3938 2.60621 20 5.80969 20H14.1903C17.3938 20 20 17.3938 20 14.1904V5.80969C20 2.60621 17.3938 0 14.1904 0ZM18.4375 14.1903C18.4375 16.5322 16.5322 18.4375 14.1904 18.4375H5.80969C3.46777 18.4375 1.5625 16.5322 1.5625 14.1904V5.80969C1.5625 3.46777 3.46777 1.5625 5.80969 1.5625H14.1903C16.5322 1.5625 18.4375 3.46777 18.4375 5.80969V14.1903Z" />
+                        <path
+                            d="M10 4.60938C7.02758 4.60938 4.60938 7.02758 4.60938 10C4.60938 12.9724 7.02758 15.3906 10 15.3906C12.9724 15.3906 15.3906 12.9724 15.3906 10C15.3906 7.02758 12.9724 4.60938 10 4.60938ZM10 13.8281C7.88918 13.8281 6.17188 12.1108 6.17188 10C6.17188 7.88918 7.88918 6.17188 10 6.17188C12.1108 6.17188 13.8281 7.88918 13.8281 10C13.8281 12.1108 12.1108 13.8281 10 13.8281Z" />
+                        <path
+                            d="M15.4688 5.3125C15.9002 5.3125 16.25 4.96272 16.25 4.53125C16.25 4.09978 15.9002 3.75 15.4688 3.75C15.0373 3.75 14.6875 4.09978 14.6875 4.53125C14.6875 4.96272 15.0373 5.3125 15.4688 5.3125Z" />
+                    </svg>
+
+                </a>
+                <a href="" class="social_item social_item_fb">
+                    <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.06265 11.2891C2.98608 11.2891 1.30162 11.2891 0.535963 11.2891C0.12761 11.2891 0 11.1389 0 10.7635C0 9.7622 0 8.73592 0 7.73467C0 7.33417 0.153132 7.20901 0.535963 7.20901H3.06265C3.06265 7.13392 3.06265 5.6821 3.06265 5.00626C3.06265 4.00501 3.2413 3.05382 3.75174 2.17772C4.2877 1.2766 5.05336 0.675845 6.0232 0.325407C6.66125 0.100125 7.2993 0 7.9884 0H10.4896C10.8469 0 11 0.150188 11 0.500626V3.35419C11 3.70463 10.8469 3.85482 10.4896 3.85482C9.80046 3.85482 9.11137 3.85482 8.42227 3.87985C7.73318 3.87985 7.37587 4.20526 7.37587 4.90613C7.35035 5.65707 7.37587 6.38298 7.37587 7.15895H10.3364C10.7448 7.15895 10.8979 7.30914 10.8979 7.70964V10.7384C10.8979 11.1389 10.7703 11.2641 10.3364 11.2641C9.41763 11.2641 7.45244 11.2641 7.37587 11.2641V19.4243C7.37587 19.8498 7.24826 20 6.78886 20C5.71694 20 4.67053 20 3.59861 20C3.21578 20 3.06265 19.8498 3.06265 19.4743C3.06265 16.8461 3.06265 11.3642 3.06265 11.2891Z" />
+                    </svg>
+
+                </a>
+            </div>
+            <div class="main_info">
+                <div class="title_wrapper">
+                    <div class="title">
+                        <span class="color_letter">П</span>ремиальный
+                        <span class="title_gap">дизайн интерьера</span>
+                    </div>
+                    <div class="subtitle">
+                        Являясь  всего лишь частью общей картины, реплицированные с зарубежных источников,
+                        современные исследования.
+                    </div>
+                </div>
+                <a href="#" class="link_tomain">
+                    <svg width="32" height="28" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.39641 11.1995L15.7982 2.79768L24.2001 11.1995H24.1985V25.1997H7.39833V11.1995H7.39641ZM4.5983 13.9976L2.53056 16.0654L0.552063 14.0869L13.82 0.818927C14.9126 -0.273627 16.6839 -0.273627 17.7765 0.818927L31.0444 14.0869L29.0659 16.0654L26.9986 13.998V25.1997C26.9986 26.7461 25.7449 27.9997 24.1985 27.9997H7.39833C5.85192 27.9997 4.5983 26.7461 4.5983 25.1997V13.9976Z" />
+                        </svg>
+                    На главную
+                </a>
+                <a href="#" class="serv_link">
+                    Больше информации
+                    <span class="arrow">
+                        <svg width="39" height="38" viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M38.5859 18.4506L34.5179 14.3826L19.2929 29.6077L4.06785 14.3826L-0.00015046 18.4506L19.2929 37.7437L38.5859 18.4506ZM34.5179 7.28349e-05L19.2929 15.2251L4.06784 7.54969e-05L-0.000147903 4.06808L19.2929 23.3611L38.5859 4.06807L34.5179 7.28349e-05Z" />
+                        </svg>
+
+                    </span>
+                    
+
+                </a>
+               
+            </div>
+            <a href="#" class="preview_block" style="background-image: url('products/main_screen.png'); display: flex;">
+
+                <div class="bottom_number">
+                                128
+                            </div>
+                <div class="right_sign">
+                    Реализованных проектов
+                    <svg width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.6464 12.7678C11.2322 13.3536 12.1819 13.3536 12.7677 12.7678L22.3136 3.2219C22.8994 2.63611 22.8994 1.68637 22.3136 1.10058C21.7278 0.514794 20.7781 0.514794 20.1923 1.10058L11.707 9.58586L3.22175 1.10058C2.63596 0.514794 1.68622 0.514794 1.10043 1.10058C0.514643 1.68637 0.514643 2.63611 1.10043 3.2219L10.6464 12.7678ZM10.207 10.293V11.7072H13.207V10.293H10.207Z"></path>
+                    </svg>
+
+
+                </div>
+
+            </a>
+            <div class="video_block">
+                <a href='https://www.youtube.com/watch?v=XuUoGFEkutk&ab_channel=LoneFox' data-fancybox
+                    class="video_wrapper" rel="group">
+                    <div class="btn-contain">
+                        <svg width="29" height="34" viewBox="0 0 29 34" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29 17L0.499998 33.4545L0.5 0.545516L29 17Z" />
+                        </svg>
+                    </div>
+                    <span class="wave"></span>
+                    <span class="wave"></span>
+                </a>
+
+
+            </div>
+
+
+        </div>
 
 
 
-    <section style="height: 100vh; background-color: aqua;">
 
-    </section>
-    <section style="height: 100vh; background-color: rgb(255, 51, 0);">
 
-    </section>
-    <section style="height: 100vh; background-color: rgb(197, 30, 161);">
 
-    </section>
+
+    </div>
+
+<section class="quiz">
+    <div class="container">
+        <div class="title">
+            Рассчитайте стоимость ремонта вашей квартиры под ключ
+        </div>
+        <div class="subtitle">
+            Это бесплатно и ни к чему не обязывает
+        </div>
+        <div class="quiz_block">
+            <div class="offer_card">
+                <div class="offer-title">
+                    <span class="bold_txt">Выберите нужный ответ</span>
+                     
+                    и нажмите кнопку далее
+                </div>
+                <div class="offer-subtitle">
+                    в конце теста  <br>
+                    вы получите:
+                </div>
+                <div class="offer_row">
+                    <div>
+                        <img src="products/offer1.png" alt="">
+                    </div>
+
+
+                  
+                    <div class="text">
+                        Подробную смету с точностью 95% с услугами и ценами на каждый этап работы
+                    </div>
+                    
+                </div>
+                <div class="offer_row">
+                    <div class="text">А также выберите один из трёх подарков</div>
+                    
+                    <div>
+                        <img src="products/offer2.png" alt="">
+                    </div>
+                    
+                </div>
+                <div class="photo">
+                    <img src="products/men.png" alt="">
+                    <div class="photo_sign">
+                        <div class="name">
+                            Дмитрий Михайлович
+                        </div>
+                        <div class="position bold_txt">
+                            Главный инженер
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="quiz_form">
+                <div class="progress_bar">
+                    <span>
+
+                    </span>
+                </div>
+                <form action="">
+
+                    <div class="question active">
+                        <div class="question_title">
+                            Ремонт какого обьекта вас интересует?
+                        </div>
+                        <div class="question_wrapper">
+                                    
+                                    <input type="radio" id="check1" name="question">
+                                <label for="check1"><div class="sign">Квартира</div>
+                                    <img src="products/quiz1.png " alt="">
+                                    <div class="custom_chk"></div>
+                                </label>
+                                <input type="radio" id="check2" name="question">
+                                <label for="check2">
+                                    <div class="sign">Дом</div>
+                                    <img src="products/quiz2.png " alt="">
+                                    <div class="custom_chk"></div>
+                                </label>
+                                <input type="radio" id="check3" name="question">
+                                <label for="check3">
+                                    <div class="sign">Нежилое помещение/коммерческое</div>
+                                    <img src="products/qui.png " alt="">
+                                    <div class="custom_chk"></div>
+                                </label>
+                        </div>
+                       
+                        <!-- <input type="radio" name="question"> -->
+                        
+                    </div>
+                    <button class="next_btn button_call">Далее</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+   
+    
     <footer>
         <div class="container">
             <div class="footer_row">
@@ -448,7 +639,7 @@
                     <a href="about.html" class="menu_item"> О нас</a>
                     <a href="" class="menu_item"> Портфолио
                     </a>
-                    <a href="" class="menu_item">Услуги и цены
+                    <a href="price.html" class="menu_item">Услуги и цены
                     </a>
                     <a href="works.html" class="menu_item">Как мы работаем
                     </a>
@@ -559,229 +750,300 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.com/libraries/fullPage.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
+
+    <!-- <script src="../dist/fullpage.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
+        integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <script type="text/javascript">
+        function initializeFullPage() {
+            var myFullpage = new fullpage('#fullpage', {
+                // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
+                navigation: true,
+                navigationPosition: 'left',
+                navigationTooltips: ['Главная', 'Второй блок', 'Третий ', 'Forth'],
+                fitToSection: false,
+                scrollingSpeed: 1000,
+                paddingTop: '110px',
+                responsiveHeight: 800
+                // navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
+
+            });
+
+        }
+        initializeFullPage()
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        var swiper_main = new Swiper(".swiper_main", {
+            spaceBetween: 30,
+            effect: "fade",
+            // speed: 900,
+            loop: true,
+            fadeEffect: {
+                // crossFade: true
+            },
+            pagination: {
+                el: ".swiper-scrollbar",
+                type: "progressbar",
 
-<!-- <script src="https://cdnjs.com/libraries/fullPage.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+                // el: ".swiper-pagination",
+                // // type: "fraction",
+                // clickable: true,
+                // // clickable: true,
+                // renderBullet: function (index, className) {
+                //     if (index <= 9) {
+                //         return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
 
-<!-- <script src="../dist/fullpage.js"></script> -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
-    integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                //     } else {
+                //         return '<span class="' + className + '">' + (index + 1) + "</span>";
+                //     }
 
-<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+                // },
+            },
 
-<script type="text/javascript">
-    function initializeFullPage() {
-        var myFullpage = new fullpage('#fullpage', {
-            // sectionsColor: ['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#ccddff']
-            navigation: true,
-            navigationPosition: 'left',
-            navigationTooltips: ['Главная', 'Второй блок', 'Третий ', 'Forth'],
-            fitToSection: false,
-            scrollingSpeed: 1000,
-            paddingTop: '110px',
-            responsiveHeight: 800
-            // navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            // pagination: {
+            //     el: ".swiper-pagination",
+            //     // type: "fraction",
+            //     clickable: true,
+            //     // clickable: true,
+            //     renderBullet: function (index, className) {
+            //         if (index <= 9) {
+            //             return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
+
+            //         } else {
+            //             return '<span class="' + className + '">' + (index + 1) + "</span>";
+            //         }
+
+            //     },
+            // },
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+            autoplay: {
+                delay: 9000,
+            },
+        });
+
+        // 3 экран
+        var swiper_disigner = new Swiper(".swiper_disigner", {
+            spaceBetween: 30,
+            effect: "fade",
+            // speed: 900,
+            // fadeEffect: {
+            //     // crossFade: true
+            // },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            autoplay: {
+                delay: 9000,
+            },
+        });
+
+        // 6 экран
+        var swiper_cases = new Swiper(".swiper_cases", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            // slidesPerView: 3,
+            // effect: "fade",
+            // speed: 900,
+            // fadeEffect: {
+            //     // crossFade: true
+            // },
+            // slidesPerView: "auto",
+            // centeredSlides: true,
+            loop: true,
+            // freeMode: true,
+            // grabCursor: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //     delay: 9000,
+            // },
+        });
+        // 8 экран
+        var swiper_reviews = new Swiper(".swiper_reviews", {
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            // slidesPerView: 3,
+            // effect: "fade",
+            // speed: 900,
+            // fadeEffect: {
+            //     // crossFade: true
+            // },
+            // slidesPerView: "auto",
+            // centeredSlides: true,
+            loop: true,
+            // freeMode: true,
+            grabCursor: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // autoplay: {
+            //     delay: 9000,
+            // },
+        });
+
+
+
+        swiper_main.on('slideChange', function () {
+            currentSlide()
+            // changePreveiw()
 
         });
 
-    }
-    initializeFullPage()
+        let preveiw_block = document.querySelector('.swiper_main .preview_block')
+        let current_slide_number = document.querySelector('.swiper-pagination-custom')
+        if(current_slide_number) {
+            current_slide_number.innerHTML =
+                    `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
+        }
+        function currentSlide() {
+            let current_slide = document.querySelector('.swiper_main .swiper-slide-visible')
+
+            // console.log(current_slide);
+            // console.log(current_slide.getAttribute('aria-label'));
+            let aria_label = current_slide.getAttribute('aria-label');
+            aria_label_obj = aria_label.split('/ ')
+            
+
+            if (aria_label_obj[0] <= 9) {
+                // current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
+                next_slide_number = +aria_label_obj[0]
+               
 
 
-    var swiper_main = new Swiper(".swiper_main", {
-        spaceBetween: 30,
-        effect: "fade",
-        speed: 900,
-        fadeEffect: {
-            // crossFade: true
-        },
-        pagination: {
-            el: ".swiper-scrollbar",
-            type: "progressbar",
+                const styleRoot = document.getElementById("change_num");
+               
+                let numbers = aria_label_obj[0]
+                function setNumberPercent(numbers) {
+                    let numberBottom;
+                    for (i in numbers) {
+                        switch (numbers[i]) {
+                          
+                            case "1":
+                                numberBottom = "translateY(0px)";
+                                break;
+                            case "2":
+                                numberBottom = "translateY(-4.375rem)";
+                                break;
+                            case "3":
+                                numberBottom = "translateY(-8.75rem)";
+                                break;
 
-            // el: ".swiper-pagination",
-            // // type: "fraction",
-            // clickable: true,
-            // // clickable: true,
-            // renderBullet: function (index, className) {
-            //     if (index <= 9) {
-            //         return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
-
-            //     } else {
-            //         return '<span class="' + className + '">' + (index + 1) + "</span>";
-            //     }
-
-            // },
-        },
-
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-
-        // pagination: {
-        //     el: ".swiper-pagination",
-        //     // type: "fraction",
-        //     clickable: true,
-        //     // clickable: true,
-        //     renderBullet: function (index, className) {
-        //         if (index <= 9) {
-        //             return '<span class="' + className + '">' + '0' + (index + 1) + "</span>";
-
-        //         } else {
-        //             return '<span class="' + className + '">' + (index + 1) + "</span>";
-        //         }
-
-        //     },
-        // },
-        // scrollbar: {
-        //     el: '.swiper-scrollbar',
-        // },
-        autoplay: {
-            delay: 9000,
-        },
-    });
-
-    // 3 экран
-    var swiper_disigner = new Swiper(".swiper_disigner", {
-        spaceBetween: 30,
-        effect: "fade",
-        speed: 900,
-        // fadeEffect: {
-        //     // crossFade: true
-        // },
-
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        autoplay: {
-            delay: 9000,
-        },
-    });
-
-    // 6 экран
-    var swiper_cases = new Swiper(".swiper_cases", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        // slidesPerView: 3,
-        // effect: "fade",
-        // speed: 900,
-        // fadeEffect: {
-        //     // crossFade: true
-        // },
-        // slidesPerView: "auto",
-        // centeredSlides: true,
-        loop: true,
-        // freeMode: true,
-        // grabCursor: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        // autoplay: {
-        //     delay: 9000,
-        // },
-    });
-    // 8 экран
-    var swiper_reviews = new Swiper(".swiper_reviews", {
-        slidesPerView: "auto",
-        spaceBetween: 30,
-        // slidesPerView: 3,
-        // effect: "fade",
-        // speed: 900,
-        // fadeEffect: {
-        //     // crossFade: true
-        // },
-        // slidesPerView: "auto",
-        // centeredSlides: true,
-        loop: true,
-        freeMode: true,
-        grabCursor: true,
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        // autoplay: {
-        //     delay: 9000,
-        // },
-    });
+                        }
+                       
+                        styleRoot.style.transform = numberBottom;
+                    }
+                }
+                setNumberPercent(numbers)
 
 
 
-    swiper_main.on('slideChange', function () {
+
+            } else {
+                // current_slide_number.innerHTML = aria_label_obj[0]
+            }
+            // изменение превью следующего слайда
+            // находим все меняющиеся блоки в превьюхе
+            // let preveiw_block = document.querySelector('.swiper_main .preview_block')
+            let preveiw_number = preveiw_block.querySelector('.bottom_number')
+            let preveiw_sign = preveiw_block.querySelector('.right_sign')
+
+
+            // 
+            let slide_blocks = document.querySelectorAll('.swiper_main .swiper-slide')
+            let slide_massive_number = +aria_label_obj[0]+1
+
+            console.log(slide_massive_number, slide_blocks.length)
+
+
+            let slide_block = slide_blocks[slide_massive_number]
+            if (slide_block) {
+                let slide_number = slide_block.querySelector('.slider_counts .number')
+                let slide_sign = slide_block.querySelector('.slider_counts')
+
+
+                preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
+                //   console.log(slide_block.style.backgroundImage)
+                //   console.log(preveiw_number.innerHTML)
+                preveiw_number.innerHTML = slide_number.innerHTML
+            }
+
+
+            if (slide_massive_number == slide_blocks.length) {
+                // preveiw_block.style.display = "none"
+                let slide_massive_number = aria_label_obj[0]
+                // console.log(slide_massive_number, slide_blocks.length)
+
+
+                let slide_block = slide_blocks[slide_massive_number]
+                if (slide_block) {
+                    let slide_number = slide_block.querySelector('.slider_counts .number')
+                    let slide_sign = slide_block.querySelector('.slider_counts')
+
+
+                    preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
+                    //   console.log(slide_block.style.backgroundImage)
+                    //   console.log(preveiw_number.innerHTML)
+                    preveiw_number.innerHTML = slide_number.innerHTML
+                }
+
+                
+
+
+            } else {
+                preveiw_block.style.display = "flex"
+            }
+            // полоса состояния
+            let progress_bar = document.querySelector(".swiper-scrollbar-custom-fill")
+
+            if(progress_bar.classList.contains('animated')){
+                progress_bar.classList.remove('animated')
+                // console.log(111);
+                progress_bar.classList.add('animated2')
+            } else 
+            {
+                progress_bar.classList.remove('animated2')
+                // console.log(112);
+                progress_bar.classList.add('animated')
+            }
+            
+
+
+        }
         currentSlide()
-        // changePreveiw()
 
-    });
+        preveiw_block.addEventListener('click', function () {
 
-    let preveiw_block = document.querySelector('.swiper_main .preview_block')
-
-    function currentSlide() {
-        let current_slide = document.querySelector('.swiper_main .swiper-slide-visible')
-
-        // console.log(current_slide);
-        // console.log(current_slide.getAttribute('aria-label'));
-        let aria_label = current_slide.getAttribute('aria-label');
-        aria_label_obj = aria_label.split('/ ')
-        let current_slide_number = document.querySelector('.swiper_main .swiper-pagination')
-
-        if (aria_label_obj[0] <= 9) {
-            current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
-
-        } else {
-            current_slide_number.innerHTML = aria_label_obj[0]
-        }
-        // изменение превью следующего слайда
-        // находим все меняющиеся блоки в превьюхе
-        // let preveiw_block = document.querySelector('.swiper_main .preview_block')
-        let preveiw_number = preveiw_block.querySelector('.bottom_number')
-        let preveiw_sign = preveiw_block.querySelector('.right_sign')
+            let next_slide = document.querySelector('.swiper_main .swiper-button-next')
+            next_slide.click()
+            // console.log(111)
 
 
-        // 
-        let slide_blocks = document.querySelectorAll('.swiper_main .swiper-slide')
-        let slide_massive_number = +aria_label_obj[0]
-        // console.log(slide_massive_number, slide_blocks.length)
+        })
 
-
-        let slide_block = slide_blocks[slide_massive_number]
-        if (slide_block) {
-            let slide_number = slide_block.querySelector('.slider_counts .number')
-            let slide_sign = slide_block.querySelector('.slider_counts')
-
-
-            preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
-            //   console.log(slide_block.style.backgroundImage)
-            //   console.log(preveiw_number.innerHTML)
-            preveiw_number.innerHTML = slide_number.innerHTML
-        }
-
-
-        if (slide_massive_number == slide_blocks.length) {
-            preveiw_block.style.display = "none"
-            // console.log('111111');
-        } else {
-            preveiw_block.style.display = "flex"
-        }
-    }
-    currentSlide()
-
-    preveiw_block.addEventListener('click', function () {
-
-        let next_slide = document.querySelector('.swiper_main .swiper-button-next')
-        next_slide.click()
-        // console.log(111)
-
-
-    })
-</script>
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+        // $(".js-range-slider").ionRangeSlider();
+    </script>
 </body>
 
 </html>
