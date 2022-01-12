@@ -12,7 +12,7 @@ module.exports = {
     mode: 'development',
     devServer: {
         open: true,
-        port: 8081,
+        port: 8084,
         contentBase: path.join(__dirname, 'src'),
         watchContentBase: true,
     },
@@ -50,6 +50,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'works.html',
             template: './src/html/works.html',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
+            template: './src/html/contacts.html',
             inject: 'body'
         })
     ],
