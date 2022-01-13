@@ -56,6 +56,11 @@ module.exports = {
             filename: 'contacts.html',
             template: './src/html/contacts.html',
             inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'service_realisation.html',
+            template: './src/html/service_realisation.html',
+            inject: 'body'
         })
     ],
     module: {

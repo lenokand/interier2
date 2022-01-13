@@ -440,7 +440,8 @@
 
                             <div class="slide_main_info">
                                 <div class="title">
-                                    <span class="color_letter">Д</span>изайн
+                                    <div class="title_wrapper"><span class="color_letter">Д</span>изайн</div>
+                                    
                                     <span class="title_gap">интерьера</span>
                                 </div>
                                 <div class="subtitle">
@@ -490,19 +491,21 @@
 
 
                     </div>
-                    <div class="swiper-slide" style="background-image: url('products/main_screen2.png');">
+                    <div class="swiper-slide" style="background-image: url('products/main_screenreal.png');">
                         <div class="container">
 
                             <div class="slide_main_info">
                                 <div class="title">
-                                    <span class="color_letter">Д</span>изайн
-                                    <span class="title_gap">интерьера2</span>
+                                    <div class="title_wrapper">
+                                        <span class="color_letter">Р</span>еализация
+                                    </div>
+                                    
+                                    <span class="title_gap">ваших идей</span>
                                 </div>
                                 <div class="subtitle">
-                                    Являясь всего лишь частью общей картины, реплицированные с зарубежных источников,
-                                    современные исследования.
+                                  Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования.
                                 </div>
-                                <a href="" class="serv_link">
+                                <a href="service_realisation.html" class="serv_link">
                                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -545,12 +548,14 @@
 
                             <div class="slide_main_info">
                                 <div class="title">
-                                    <span class="color_letter">Д</span>изайн
-                                    <span class="title_gap">интерьера3</span>
+                                    <div class="title_wrapper">
+                                        <span class="color_letter">П</span>роизводство
+                                    </div>
+                                    <span class="title_gap">мебели</span>
                                 </div>
                                 <div class="subtitle">
                                     Являясь всего лишь частью общей картины, реплицированные с зарубежных источников,
-                                    современные исследования.
+                                    современные исследования. 
                                 </div>
                                 <a href="" class="serv_link">
                                     <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
@@ -2094,33 +2099,37 @@
 
         let preveiw_block = document.querySelector('.swiper_main .preview_block')
         let current_slide_number = document.querySelector('.swiper-pagination-custom')
-        if(current_slide_number) {
+
+        if (current_slide_number) {
             current_slide_number.innerHTML =
-                    `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
+                `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
         }
+
         function currentSlide() {
             let current_slide = document.querySelector('.swiper_main .swiper-slide-visible')
+            if(current_slide){
 
             // console.log(current_slide);
             // console.log(current_slide.getAttribute('aria-label'));
             let aria_label = current_slide.getAttribute('aria-label');
             aria_label_obj = aria_label.split('/ ')
-            
+
 
             if (aria_label_obj[0] <= 9) {
                 // current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
                 next_slide_number = +aria_label_obj[0]
-               
+
 
 
                 const styleRoot = document.getElementById("change_num");
-               
+
                 let numbers = aria_label_obj[0]
+
                 function setNumberPercent(numbers) {
                     let numberBottom;
                     for (i in numbers) {
                         switch (numbers[i]) {
-                          
+
                             case "1":
                                 numberBottom = "translateY(0px)";
                                 break;
@@ -2132,7 +2141,7 @@
                                 break;
 
                         }
-                       
+
                         styleRoot.style.transform = numberBottom;
                     }
                 }
@@ -2153,9 +2162,9 @@
 
             // 
             let slide_blocks = document.querySelectorAll('.swiper_main .swiper-slide')
-            let slide_massive_number = +aria_label_obj[0]+1
+            let slide_massive_number = +aria_label_obj[0] + 1
 
-            console.log(slide_massive_number, slide_blocks.length)
+            // console.log(slide_massive_number, slide_blocks.length)
 
 
             let slide_block = slide_blocks[slide_massive_number]
@@ -2189,7 +2198,7 @@
                     preveiw_number.innerHTML = slide_number.innerHTML
                 }
 
-                
+
 
 
             } else {
@@ -2198,30 +2207,36 @@
             // полоса состояния
             let progress_bar = document.querySelector(".swiper-scrollbar-custom-fill")
 
-            if(progress_bar.classList.contains('animated')){
+            if (progress_bar.classList.contains('animated')) {
                 progress_bar.classList.remove('animated')
                 // console.log(111);
                 progress_bar.classList.add('animated2')
-            } else 
-            {
+            } else {
                 progress_bar.classList.remove('animated2')
                 // console.log(112);
                 progress_bar.classList.add('animated')
             }
+
+
+            }
             
+
 
 
         }
         currentSlide()
 
-        preveiw_block.addEventListener('click', function () {
+
+        if(preveiw_block){
+            preveiw_block.addEventListener('click', function () {
 
             let next_slide = document.querySelector('.swiper_main .swiper-button-next')
             next_slide.click()
             // console.log(111)
 
 
-        })
+            })
+                    }
 
         // $(".js-range-slider").ionRangeSlider();
     </script>
