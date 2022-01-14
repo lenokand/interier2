@@ -61,6 +61,11 @@ module.exports = {
             filename: 'service_realisation.html',
             template: './src/html/service_realisation.html',
             inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'service_manufacture.html',
+            template: './src/html/service_manufacture.html',
+            inject: 'body'
         })
     ],
     module: {

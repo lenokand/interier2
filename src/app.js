@@ -440,10 +440,10 @@ if (cursor) {
 
 //  const cards = document.querySelector(".screen1_img");
 const cards7 = document.querySelectorAll(".screen7_img");
-const cardsSwiper = document.querySelector(".swiper_cases .swiper-slide-active .img_part");
+// const cardsSwiper = document.querySelector(".swiper_cases .swiper-slide-active .img_part");
 // const images = document.querySelectorAll(".card__img");
 // const backgrounds = document.querySelectorAll(".card__bg");
-if (cardsSwiper !== null || cards7 !== null) {
+if ( cards7 !== null) {
 
   const range = 16;
 
@@ -476,11 +476,11 @@ if (cardsSwiper !== null || cards7 !== null) {
           card.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
         })
       }
-      console.log(cardsSwiper)
-      if (cardsSwiper) {
+      // console.log(cardsSwiper)
+      // if (cardsSwiper) {
 
-        cardsSwiper.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
-      }
+      //   cardsSwiper.style.transform = `rotateX(${yValue}deg) rotateY(${xValue}deg)`;
+      // }
 
 
 
