@@ -130,7 +130,9 @@ body.menu_open {
 }
 
 
-
+body {
+    background-image: url('public/products/bg_pin.png');
+}
 
 
 
@@ -683,7 +685,7 @@ a {
                     content: '';
                     display: block;
                     background: #13AC6C;
-                    width: toRem(480);
+                    width: toRem(500);
                     height: 100%;
                     position: absolute;
                     left: 0;
@@ -749,7 +751,9 @@ header {
     }
 
     .bottom_row {
-        height: toRem(110);
+        // height: toRem(110);
+        height: 110px;
+
         display: flex;
         // align-items: center;
         border-bottom: none;
@@ -851,6 +855,7 @@ header {
             transition: 300ms ease;
             width: 14.375rem;
 
+
             // align-items: center;
             a {
 
@@ -882,7 +887,7 @@ header {
                 content: '';
                 display: block;
                 background: #13AC6C;
-                width: toRem(440);
+                // width: toRem(440);
                 height: 100%;
                 position: absolute;
                 left: 0;
@@ -890,6 +895,7 @@ header {
                 bottom: 0;
                 z-index: 0;
                 transition: ease 300ms;
+                width: 31.5rem;
 
             }
 
@@ -1341,7 +1347,9 @@ header {
         cursor: pointer;
         display: flex;
         align-items: flex-end;
-        background-position: right 43% bottom 0;
+        // background-position: right 31% bottom 3%;
+        background-repeat: no-repeat;
+        background-size: cover;
         transition: ease 300ms;
 
         &:hover {
@@ -2351,6 +2359,7 @@ header {
             justify-content: center;
             flex-direction: column;
             padding-left: toRem(100);
+            background-size: cover;
 
             &:hover {
                 background-size: 110%;
@@ -2398,7 +2407,7 @@ header {
         top: toRem(390);
         bottom: 0;
         background: linear-gradient(94.74deg, #1D1818 9.1%, #343131 98.42%);
-        width: toRem(845);
+        width: 50%;
         height: 100%;
         z-index: 0;
     }
@@ -2596,7 +2605,7 @@ header {
                 display: flex;
                 flex-direction: column;
                 width: 50%;
-                padding-right: 5%;
+                padding-right: 10%;
             }
 
             .left_title {
@@ -2666,7 +2675,7 @@ header {
                     flex-direction: column;
 
                     &:first-child {
-                        margin-bottom: toRem(30);
+                        margin-bottom: toRem(10);
                     }
 
                     .sign {
@@ -2748,7 +2757,8 @@ header {
     .swiper-button-next,
     .swiper-button-prev {
         top: auto;
-        bottom: toRem(60);
+        // bottom: toRem(60);
+        bottom: 0;
 
         width: toRem(100);
         height: toRem(60);
@@ -2807,7 +2817,7 @@ header {
 #section6 {
     background-position: bottom right;
     background-repeat: no-repeat;
-    background-size: 59%, contain;
+    background-size: 58%, 50% 100%;
 
     // .darc_block {
     //     position: absolute;
@@ -2834,7 +2844,7 @@ header {
             line-height: toRem(89);
             /* or 162% */
             max-width: toRem(680);
-
+            // background: rgba(255, 255, 255, 0.75);
             color: #434040;
             margin-bottom: toRem(23);
 
@@ -2912,6 +2922,7 @@ header {
             padding-right: toRem(40);
             font-family: Yeseva One;
             font-style: normal;
+
             font-weight: normal;
             font-size: toRem(55);
             line-height: toRem(68);
@@ -3243,7 +3254,7 @@ header {
             font-size: toRem(19);
             line-height: toRem(29);
             /* or 153% */
-
+            margin-bottom: toRem(15);
 
             color: #434040;
 
@@ -3419,7 +3430,7 @@ button {
         font-weight: normal;
         font-size: toRem(55);
         line-height: toRem(89);
-
+        background: rgba(255, 255, 255, 0.75);
 
         color: #434040;
         margin-bottom: toRem(30);
@@ -3453,7 +3464,7 @@ button {
                 font-size: toRem(24);
                 line-height: toRem(39);
                 /* or 162% */
-
+                background: none;
 
                 color: #434040;
                 margin-bottom: toRem(30);
@@ -3883,7 +3894,7 @@ footer {
 }
 
 .inner {
-    background-image: url('public/products/bg_pin.png');
+    //     background-image: url('public/products/bg_pin.png');
     background-size: contain;
 
     header {
@@ -3931,6 +3942,7 @@ footer {
                 font-size: toRem(55);
                 line-height: toRem(89);
                 color: #434040;
+                background: rgba(255, 255, 255, 0.75);
                 margin-bottom: toRem(26);
             }
 
@@ -3993,7 +4005,7 @@ footer {
     margin-bottom: toRem(170);
 
     .title {
-
+        background: rgba(255, 255, 255, 0.75);
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -4083,6 +4095,7 @@ footer {
     }
 
     .title {
+
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -4130,6 +4143,7 @@ footer {
         padding: toRem(45) toRem(95);
 
         .title {
+
             font-family: Yeseva One;
             font-style: normal;
             font-weight: normal;
@@ -4174,6 +4188,8 @@ footer {
     }
 
     .title {
+        background: rgba(255, 255, 255, 0.75);
+        width: 50%;
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -4330,7 +4346,8 @@ footer {
 
 .about_cercificate {
     .title {
-
+        background: rgba(255, 255, 255, 0.75);
+        width: 50%;
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -4507,6 +4524,8 @@ footer {
     margin-top: toRem(60);
 
     .title {
+        background: rgba(255, 255, 255, 0.75);
+        width: 50%;
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -4553,7 +4572,7 @@ footer {
 .contacts_section {
     padding-top: toRem(100);
 
-    .title {
+    .container>.title {
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
@@ -4561,6 +4580,7 @@ footer {
         line-height: 100%;
         color: #434040;
         margin-bottom: toRem(75);
+        background-color: #fff;
     }
 
     .contact_tabs_block {
@@ -4697,8 +4717,9 @@ footer {
 
 /* nav-icon-1 */
 .burger {
-    position: absolute;
+    // position: absolute;
     // top: 350px;
+    position: static;
     z-index: 2;
     opacity: 0;
 }
@@ -4824,7 +4845,7 @@ footer {
         font-size: toRem(55);
         line-height: toRem(89);
         /* identical to box height, or 162% */
-
+        background: rgba(255, 255, 255, 0.75);
         margin-bottom: toRem(12);
         color: #434040;
     }
@@ -4997,6 +5018,7 @@ tbody {
                 font-size: toRem(55);
                 line-height: toRem(89);
                 color: #434040;
+                background: rgba(255, 255, 255, 0.75);
                 margin-bottom: toRem(26);
             }
 
@@ -5029,6 +5051,8 @@ tbody {
         font-family: Yeseva One;
         font-style: normal;
         font-weight: normal;
+        background: rgba(255, 255, 255, 0.75);
+        align-self: flex-start;
         font-size: toRem(55);
         line-height: 100%;
         /* identical to box height, or 55px */
@@ -5225,7 +5249,8 @@ tbody {
         font-size: toRem(35);
         line-height: toRem(35);
         /* identical to box height */
-
+        background: rgba(255, 255, 255, 0.75);
+        width: 50%;
 
         color: #434040;
         margin-bottom: toRem(60);
@@ -5630,7 +5655,7 @@ tbody {
         font-size: toRem(55);
         line-height: 117%;
         /* or 64px */
-
+        background-color: #fff;
         text-align: center;
 
         color: #434040;
@@ -5647,6 +5672,7 @@ tbody {
         text-align: center;
         margin: auto;
         margin-bottom: toRem(27);
+        background-color: #fff;
     }
 
     .quiz_block {
@@ -5930,6 +5956,8 @@ tbody {
                 color: #434040;
                 margin-bottom: toRem(26);
                 text-align: start;
+                width: 80%;
+                margin-left: 0;
             }
 
             .subtitle {
@@ -5970,9 +5998,10 @@ tbody {
         /* identical to box height, or 55px */
 
         text-align: center;
-
+        // margin: auto;
         color: #434040;
         margin-bottom: toRem(26);
+        background-color: #fff;
     }
 
     .subtitle {
@@ -5982,11 +6011,12 @@ tbody {
         font-size: toRem(19);
         line-height: toRem(19);
         text-align: center;
-
+        background-color: #fff;
         color: #434040;
         // max-width: 50%;
         // margin: auto;
         margin-bottom: toRem(37);
+
 
     }
 
@@ -6044,7 +6074,7 @@ tbody {
         font-size: toRem(55);
         line-height: 123.5%;
         /* or 68px */
-
+        background-color: #fff;
 
         color: #434040;
         margin-bottom: toRem(50);
@@ -6228,6 +6258,7 @@ tbody {
 
         .title {
             text-align: center;
+            background-color: #fff;
         }
 
         .darc_block {
@@ -6434,7 +6465,7 @@ tbody {
             font-size: toRem(55);
             line-height: 123.5%;
             /* or 68px */
-
+            background-color: #fff;
 
             color: #434040;
             margin-bottom: toRem(18);
@@ -6587,7 +6618,7 @@ tbody {
             font-size: toRem(55);
             line-height: 100%;
             /* identical to box height, or 55px */
-
+            background-color: #fff;
             // text-align: center;
 
             color: #434040;
@@ -6894,6 +6925,8 @@ tbody {
 
     .title {
         color: #434040;
+        width: 40%;
+        background-color: #fff;
     }
 }
 
@@ -6908,11 +6941,13 @@ tbody {
         line-height: 100%;
         // text-align: center;
         margin-bottom: toRem(43);
-
+        background-color: #fff;
+        width: 50%;
         color: #434040;
     }
 
     .subtitle {
+        background-color: #fff;
         font-family: Josefin Sans;
         font-style: normal;
         font-weight: normal;
@@ -7450,6 +7485,7 @@ tbody {
 
 .video_section {
     margin-bottom: toRem(90);
+
     .title {
         font-family: Yeseva One;
         font-style: normal;
@@ -7469,12 +7505,14 @@ tbody {
         position: relative;
         display: block;
         width: 100%;
-        img{
+
+        img {
             width: 100%;
             object-fit: cover;
             object-position: center;
         }
     }
+
     .video_block {
         position: absolute;
         display: inline-block;
@@ -7561,4 +7599,236 @@ tbody {
         height: toRem(260);
         opacity: 0;
     }
+}
+
+
+
+@media screen and (max-width:1250px) {
+    .swiper_main .swiper-slide .slide_main_info {
+        margin: auto;
+        margin-top: 21.125rem;
+    }
+
+    .swiper_main .preview_block {
+        left: calc(100% - 16.6875rem);
+        left: 83%;
+        width: 17%;
+    }
+
+    .fp-viewing-0 header .bottom_row .container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .fp-viewing-0 header .bottom_row .logo {
+        width: 17%;
+    }
+
+    .fp-viewing-0 header .bottom_row .social {
+        width: 17%;
+    }
+
+    .fp-viewing-0 header .bottom_row .social:after {
+        width: auto;
+        right: 0;
+    }
+
+    .video_block .video_wrapper .btn-contain {
+        svg {
+            max-width: 80%;
+        }
+    }
+
+    .swiper_main .swiper_pagination_block {
+        bottom: 11%;
+    }
+
+    .video_block {
+        right: 21%;
+        bottom: 29%;
+    }
+
+    .section {
+        padding-top: 0 !important;
+    }
+    #section1{
+        padding-top: 50px!important;
+        padding-bottom: 50px;
+
+        height: auto!important;
+       
+        .fp-tableCell{
+            height: auto!important;}
+    }
+    #section2{
+        padding-top: 50px!important;
+        padding-bottom: 50px;
+
+        height: auto!important;
+       
+        .fp-tableCell{
+            height: auto!important;}
+    }
+    #section3{
+        padding-top: 50px!important;
+        padding-bottom: 50px;
+
+        height: auto!important;
+       
+        .fp-tableCell{
+            height: auto!important;}
+    }
+    #section5 {
+        padding-top: 70px !important;
+    }
+
+    #section8 {
+        height: auto !important;
+
+        .fp-tableCell {
+            height: auto !important;
+        }
+
+        .swiper-wrapper {
+            padding-bottom: 50px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            bottom: 0;
+        }
+        .swiper-slide{
+            height: auto;
+        }
+
+    }
+
+    #section5{
+        padding-bottom: 30px;
+        height: auto!important;
+        .fp-tableCell{
+            height: auto!important;
+            .darc_block{
+                top: 200px;
+                height: calc(100% - 198px);
+            }
+        }
+
+    } 
+ 
+    #section6{
+        height: auto!important;
+        padding-top: 50px!important;
+        padding-bottom: 50px;
+        background-size: contain, 50% 100%;
+        background-position: 80% 100%,100% 100%;
+        .fp-tableCell{
+            height: auto!important;}
+    }
+  
+    #section7{
+        height: 500px!important;
+       
+        .fp-tableCell{
+            height: auto!important;}
+
+            .left_part .tab_control_item:before{
+                left: -59%;
+            }
+
+    }
+    #section2{
+        .left_part .tab_control_item:before{
+            left: -49%;
+        }
+    } 
+    #section9{
+        height: auto!important;
+        padding-top: 50px!important;
+        padding-bottom: 50px;
+        .fp-tableCell{
+            height: auto!important;}
+        
+    }
+    #section10{
+        height: auto!important;
+        padding-top: 50px!important;
+        // padding-bottom: 50px;
+        .fp-tableCell{
+            height: auto!important;}
+        .wraper_map{
+            height: 300px;
+            margin-bottom: 50px;
+
+        }
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .swiper_main .swiper-button-next, .swiper_main .swiper-button-prev{
+        height: auto;
+        
+    }
+    #section1 .container{
+        justify-content: space-between;
+    }
+    
+    
+}
+.addaptive_menu
+{
+    display: none;
+}
+
+
+@media screen and (max-width:900px) {
+    .addaptive_menu{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+
+        .social .social_tel{
+            font-size: 14px;
+        }
+        .social a{
+            font-size: 12px;
+        }
+        .logo {
+            // border-right: 1px solid rgba(255, 255, 255, 0.12);
+            width: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            .light_fon {
+                display: none;
+            }
+
+            .darc_fon {
+                display: block;
+            }
+        }
+    }
+    header{
+        left: -100%;
+    }
+    .fp-viewing-0 header .top_row .container .top_item{
+        font-size: 12px;
+    }
+    header .bottom_row menu .menu_item{
+        font-size: 14px;
+    }
+    .fp-viewing-0 header .bottom_row .social .social_tel{
+        font-size: 14px;
+    }
+    .fp-viewing-0 header .bottom_row .social a{
+        font-size: 12px;
+    }
+    
 }

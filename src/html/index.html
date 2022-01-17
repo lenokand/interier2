@@ -18,6 +18,32 @@
 </head>
 
 <body>
+    <div class="addaptive_menu">
+        <a href="index.html" class="logo">
+            <img src="products/logo.svg" class="darc_fon" alt="">
+            <img src="products/logo_dark.svg" class="light_fon" alt="">
+        </a>
+
+        <div class="burger nav-icon-1">
+        
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          
+        </div>
+        <div class="social">
+            <a class="social_tel" href="tel:+7 (495) 104 85 95">+7 (495) 104 85 95</a>
+            <a href="#modal-call-time" data-fancybox="modal-call-time" class="callback_btn">
+                Перезвоните мне!
+            </a>
+        </div>
+    </div>
     <header>
         <div class="top_row">
             <div class="container">
@@ -435,7 +461,7 @@
 
             <div class="swiper swiper_main">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="background-image: url('products/main_screen.png');">
+                    <div class="swiper-slide" style="background-image: url('products/main_screen.png');" data-prev-img="products/prev3.png">
                         <div class="container">
 
                             <div class="slide_main_info">
@@ -491,7 +517,7 @@
 
 
                     </div>
-                    <div class="swiper-slide" style="background-image: url('products/main_screenreal.png');">
+                    <div class="swiper-slide" style="background-image: url('products/main_screenreal.png');" data-prev-img="products/prev1.png">
                         <div class="container">
 
                             <div class="slide_main_info">
@@ -543,7 +569,7 @@
 
                     </div>
 
-                    <div class="swiper-slide" style="background-image: url('products/main_screen.png');">
+                    <div class="swiper-slide" style="background-image: url('products/main_screen3.png');" data-prev-img="products/prev2.png">
                         <div class="container">
 
                             <div class="slide_main_info">
@@ -1958,9 +1984,10 @@
                 navigationPosition: 'left',
                 navigationTooltips: ['Главная', 'Второй блок', 'Третий ', 'Forth'],
                 fitToSection: false,
-                scrollingSpeed: 1000,
+                scrollingSpeed: 600,
                 paddingTop: '110px',
-                responsiveHeight: 800
+                responsiveHeight: 790,
+                responsiveWidth: 1200,  
                 // navigationTooltips: ['Page 1', 'Page 2', 'Any text!'],
 
             });
@@ -2171,9 +2198,13 @@
             if (slide_block) {
                 let slide_number = slide_block.querySelector('.slider_counts .number')
                 let slide_sign = slide_block.querySelector('.slider_counts')
-
-
-                preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
+                // data-prev-img
+                // getAttribute('data-prev-img')
+               
+                let prevImgUrl = "url('" + slide_block.getAttribute('data-prev-img') + "')"
+               
+                preveiw_block.style.backgroundImage = prevImgUrl
+                // preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
                 //   console.log(slide_block.style.backgroundImage)
                 //   console.log(preveiw_number.innerHTML)
                 preveiw_number.innerHTML = slide_number.innerHTML
@@ -2191,8 +2222,11 @@
                     let slide_number = slide_block.querySelector('.slider_counts .number')
                     let slide_sign = slide_block.querySelector('.slider_counts')
 
-
-                    preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
+                    
+                    let prevImgUrl = "url('" + slide_block.getAttribute('data-prev-img') + "')"
+               
+                    preveiw_block.style.backgroundImage = prevImgUrl
+                    // preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
                     //   console.log(slide_block.style.backgroundImage)
                     //   console.log(preveiw_number.innerHTML)
                     preveiw_number.innerHTML = slide_number.innerHTML

@@ -439,7 +439,7 @@ if (cursor) {
 // паралакс картинки
 
 //  const cards = document.querySelector(".screen1_img");
-const cards7 = document.querySelectorAll(".screen7_img");
+const cards7 = document.querySelectorAll(".screen7_img1");
 // const cardsSwiper = document.querySelector(".swiper_cases .swiper-slide-active .img_part");
 // const images = document.querySelectorAll(".card__img");
 // const backgrounds = document.querySelectorAll(".card__bg");
@@ -566,10 +566,6 @@ const filterGallary2 = Fancybox.bind('[href="#modal-call"]', {
 
 // аккордион
 
-
-
-
-// JavaScript
 
 
 if(document.querySelector('.accordion-item')){
