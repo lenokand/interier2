@@ -8569,8 +8569,10 @@ tbody {
         
     }
     .section#section9{
+        padding-bottom: 0;
         .wrapper{
             flex-direction: column;
+            padding-bottom: 0;
             .title{
                 padding: 0;
                 font-size: 55px;
@@ -8592,7 +8594,7 @@ tbody {
                 
             }
             .info_block{
-                align-self: flex-start;
+                align-self: center;
                 width: 90%;
                 margin: auto;
             }
@@ -8600,6 +8602,13 @@ tbody {
                 max-width: 450px;
                 width: auto;
                 align-self: center;
+            }
+            .info_row{
+                text-align: center;
+            }
+            .button_call{
+                // align-self: center;
+                margin: auto;
             }
             .info_row .info_wrapper{
                 padding: 0;
@@ -8613,5 +8622,170 @@ tbody {
 
         } 
         
+    }
+    .section#section10{
+        .title{
+            font-size: 55px;
+            line-height: 61px;
+            margin-bottom: 102px;
+        }
+        .wraper_map{
+            flex-direction: column-reverse;
+            height: auto;
+            margin-bottom: 0;
+            .contacts{
+                width: 100%;
+                margin-bottom: 25px;
+                padding: 30px;
+                .title{
+                    font-size: 24px;
+                        line-height: 39px;
+                        margin-bottom: 41px;
+                }
+                .contacts_info .info_item .sign{
+                    font-size: 24px;
+                    line-height: 121.48%;
+                }
+            }
+            .map{
+                height: 400px;
+                width: 100%;
+            }
+        }
+
+    }
+    footer{
+        margin-top: 0;
+        padding-top: 70px;
+         .footer_row{
+             flex-wrap: wrap;
+             align-items: flex-start;
+             > a{
+                 order: 3;
+                 width: 100%;
+                 img{
+                     margin: auto;
+                 }
+             }
+             .menu{
+                 order: 1;
+                 width: 50%;
+                 flex-direction: column;
+                 align-items: flex-start;
+                 .menu_item{
+                     margin-bottom: 60px;
+                 }
+             }
+             .social{
+                 order: 2;
+                 width: 50%;
+                 align-items: flex-end;
+             }
+         }
+         .social_row{
+             justify-content: center;
+             margin-top: 57px;
+         }
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    .swiper_main .swiper-slide .slide_main_info{
+        max-width: 100%;
+        padding: 0;
+    }
+    #section0 .fp-tableCell .video_block{
+        left: 15%;
+        bottom: 30%;
+
+    }
+    #section0 .fp-tableCell .swiper_main .swiper-slide .slide_main_info .subtitle{
+        margin-bottom: 70px;
+    }
+}
+
+@media screen and (max-width:660px) {
+
+    #section10 .wraper_map .contacts .contacts_info .info_item{
+        width: 100%;
+    }
+    .section#section4 .fp-tableCell .container_right .right_part .right_item{
+        padding-left: 10px;
+    }
+    .section#section3 .swiper-slide .left_part .sign_front{
+        left: 15%;
+    }
+    .section#section3 .swiper-slide .left_part img{
+        height: 650px;
+    }
+    .swiper_main .swiper_pagination_block{
+        width: 100%;
+        left: 0;
+    }
+
+
+    
+}
+
+
+
+@media screen and (max-width:600px) {
+    #section0 .fp-tableCell .swiper_main .swiper-slide .slide_main_info .title, .swiper_main .swiper-slide .slide_main_info .title .title_gap{
+        font-size: 31px;
+        line-height: 39px;
+    }
+    #section0 .fp-tableCell .swiper_main .swiper-slide .slide_main_info .title .color_letter{
+        font-size: 100px;
+    line-height: 140px;
+
+
+    }
+    #section1 .container .screen1_img{
+        max-width: 100%;
+    }
+    .section#section3 .swiper-slide .right_part .title,  .section#section6 .container .title, #section8 .title, .section#section9 .wrapper .title_hidden{
+        font-size: 47px;
+        line-height: 60px;
+    }
+    .addaptive_menu .social{
+        padding-left: 5px;
+        width: 205px;
+
+    }
+    .addaptive_menu .logo{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #section3 .swiper-slide .left_part .color_letter{
+        font-size: 100px;
+    }
+    .section#section3 .swiper-slide .left_part .sign_back{
+        top: 90px;
+        font-size: 40px;
+    line-height: 104px;
+    }
+    .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content{
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width:400px) {
+    #section0 .fp-tableCell .swiper_main .swiper-slide .slide_main_info .title, .swiper_main .swiper-slide .slide_main_info .title .title_gap, #section2 .left_part .title{
+        font-size: 28px;
+    }
+    #section8 .title, .section#section3 .swiper-slide .right_part .title, .section#section6 .container .title, .section#section9 .wrapper .title_hidden {
+        font-size: 44px;
+        line-height: 60px;
+    }
+    #section2 .right_part .tabs_content .pointer .pointer_sign{
+        width: 300px;
+    }
+    .fancybox__content{
+        padding: 23px;
+    }
+    #modal-call-time .button_call, #modal-call .button_call{
+        margin-top: 30px;
+    margin-bottom: 30px;
     }
 }
