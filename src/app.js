@@ -497,7 +497,9 @@ if ( cards7 !== null) {
 const icons = document.querySelectorAll('.burger');
 icons.forEach(icon => {
   icon.addEventListener('click', (event) => {
-    icon.classList.toggle("open");
+    icon.classList.toggle("open");  
+  document.body.classList.toggle("menu_open");  
+
   });
 });
 

@@ -4519,6 +4519,9 @@ footer {
 
 
 }
+.swiper_main .preview_block{
+    display: flex;
+}
 
 .about_partners {
     margin-top: toRem(60);
@@ -4719,9 +4722,9 @@ footer {
 .burger {
     // position: absolute;
     // top: 350px;
-    position: static;
-    z-index: 2;
-    opacity: 0;
+    position: relative;
+    z-index: 3;
+    opacity: 1;
 }
 
 .nav-icon-1 {
@@ -7791,7 +7794,38 @@ tbody {
         display: flex;
         justify-content: space-between;
         z-index: 1;
+        .social {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: toRem(27);
+            padding-right: toRem(0);
+            align-items: flex-start;
+            // background: #13AC6C;
+            transition: 300ms ease;
+            width: toRem(230);
 
+            // align-items: center;
+            a {
+
+
+                color: #FFFFFF;
+
+            }
+            background: #13AC6C;
+            .social_tel {
+                font-weight: bold;
+                // font-size: toRem(21);
+                line-height: 174.5%;
+                /* identical to box height, or 37px */
+                margin-bottom: toRem(12);
+                z-index: 1;
+
+            }
+
+
+        }
         .social .social_tel{
             font-size: 14px;
         }
@@ -7814,6 +7848,16 @@ tbody {
                 display: block;
             }
         }
+        .burger_wrapper{
+            background: #F7F9FB;
+            width: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .burger{
+            
+        }
     }
     header{
         left: -100%;
@@ -7830,5 +7874,10 @@ tbody {
     .fp-viewing-0 header .bottom_row .social a{
         font-size: 12px;
     }
-    
+    body.menu_open{
+        overflow: hidden!important;
+    }
+    .swiper_main .preview_block{
+        display: none!important;
+    }
 }
