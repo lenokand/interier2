@@ -8768,6 +8768,10 @@ tbody {
     .fancybox__carousel.is-draggable .fancybox__slide .fancybox__content{
         box-sizing: border-box;
     }
+    #modal-call-time{
+        width: auto;
+        padding: 15px 10px;
+    }
 }
 
 @media screen and (max-width:400px) {
@@ -8788,4 +8792,5 @@ tbody {
         margin-top: 30px;
     margin-bottom: 30px;
     }
+   
 }
