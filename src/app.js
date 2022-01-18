@@ -494,14 +494,27 @@ if ( cards7 !== null) {
 
 
 
-const icons = document.querySelectorAll('.burger');
-icons.forEach(icon => {
-  icon.addEventListener('click', (event) => {
-    icon.classList.toggle("open");  
-  document.body.classList.toggle("menu_open");  
+const iconClose = document.querySelector('.adaptive_close');
+
+
+const icons = document.querySelector('.burger');
+
+  icons.addEventListener('click', (event) => {
+    icons.classList.toggle("open");  
+    document.body.classList.toggle("menu_open");  
+    document.querySelector('header').classList.toggle("show");  
+    // fullpage_api.destroy('all');
 
   });
+
+iconClose.addEventListener('click', (event) => {
+  icons.classList.toggle("open");  
+  document.body.classList.toggle("menu_open");  
+  document.querySelector('header').classList.toggle("show");  
+
+  // initializeFullPage()
 });
+
 
 
 
