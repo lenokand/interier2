@@ -4937,7 +4937,8 @@ footer {
 
     tbody {
         tr td:last-child {
-            width: 15%;
+            // width: 15%;
+            width: 160px;
         }
     }
 }
@@ -7625,7 +7626,30 @@ tbody {
         margin: auto;
         margin-top: 21.125rem;
     }
+    #section8 .swiper-slide .date_row, #section8 .swiper-slide .text_row{
+        font-size: 16px;
+        line-height: 120%;
+    }
+     #section8 .swiper-slide .customer_info .position{
+         font-size: 12px;
+         line-height: 120%;
+     }
+     .contacts_section .wraper_map .contacts .contacts_info .info_item a, .contacts_section .wraper_map .contacts .contacts_info .info_item .text{
+         font-size: 12px;
+         line-height: 120%;
+     }
 
+     .work_main .container .left_block .subtitle{
+         font-size: 14px;
+         line-height: 120%;
+     }
+     section.stages .bottom_row {
+        font-size: 12px;
+        line-height: 120%;
+     }
+     section.stages .about_numbers_item{
+        height: auto;
+     }
     .swiper_main .preview_block {
         left: calc(100% - 16.6875rem);
         left: 83%;
@@ -8033,7 +8057,115 @@ tbody {
 
         }
     }
+    div.price_section{
+        .container{
+            padding-top: 80px;
+        }
+        .title{
+          
+            font-size: 50px;
+            line-height: 54px;
+            margin-bottom: 26px;
 
+        }
+        .price_section .subtitle{
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 31px;
+            margin-bottom: 42px;
+        }
+        .price_block{
+            flex-direction: column-reverse;
+            .price_block_service {
+                // align-items: center;
+                .price_service_item{
+                    margin: auto;
+                    margin-bottom: 48px;
+                }
+            }
+            .price_block_table{
+                width: 100%;
+            }
+        }
+    }
+    section.work_main{
+        padding-bottom: 0;
+        margin-bottom: 70px;
+        .darc_block{
+            width: 53%;
+            top: 100px;
+            bottom: auto;
+            height: 400px;
+        }
+        .container{
+            flex-direction: column-reverse;
+            .right_block{
+                width: 100%;
+                max-width: 450px;
+                margin-bottom: 100px;
+               
+
+            }
+            .left_block{
+                width: 100%;
+                .title{
+                    background: none;
+                    font-size: 55px;
+line-height: 59px;
+margin-bottom: 38px;
+                }
+                .subtitle{
+                    width: 100%;
+                    font-weight: 300;
+font-size: 19px;
+line-height: 31px;
+margin-bottom: 0;
+                }
+                
+            }
+        }
+    }
+    section.equipment{
+        margin-bottom: 20px;
+        .title{
+            font-size: 50px;
+            line-height: 100%;
+            margin-bottom: 70px;
+        }
+        .equipment_block{
+            margin-right: 0;
+            margin-left: 0;
+            .equipment_block_item{
+                width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+                min-height: auto;
+                .img_wrapper{
+                    height: 255px;
+                    margin-bottom: 30px;
+                }
+            }
+        } 
+        
+    }
+    section.stages{
+        .title{
+            font-size: 35px;
+            line-height: 35px;
+            margin-bottom: 45px;
+            width: 100%;
+        }
+        .about_number_block{
+            margin-right: 0;
+            margin-left: 0;
+        }
+         .about_numbers_item{
+             width: 100%;
+             margin-right: 0;
+             margin-left: 0;
+             padding: 30px;
+         }
+    }
     .fp-viewing-0 header .top_row .container .top_item {
         font-size: 12px;
     }
@@ -8207,9 +8339,29 @@ tbody {
     }
 
 
-    .inner .addaptive_menu .logo {
-        background: #252525;
-        padding: 10px 0;
+    .inner{
+        .section#section8{
+            margin-top: 65px;
+        }
+        .addaptive_menu  {
+            background: #252525;
+            .logo{
+                padding: 10px 0;
+            }
+    
+            
+        }
+        header .bottom_row{
+            background: none;
+            menu .menu_item.active{
+                background: none;
+                text-decoration: underline;
+            }
+        }
+        
+    } 
+    section.about_numbers .about_numbers_item{
+        height: auto;
     }
 
     section.about_main {
@@ -9228,11 +9380,17 @@ tbody {
 
 
 @media screen and (max-width:600px) {
+    section.equipment .title, .inner .section#section8 .title{
+        font-size: 45px;
+    }
 
     #section0 .fp-tableCell .swiper_main .swiper-slide .slide_main_info .title,
     .swiper_main .swiper-slide .slide_main_info .title .title_gap {
         font-size: 31px;
         line-height: 39px;
+    }
+    div.contacts_section .container>.title{
+        font-size: 35px;
     }
 
     #section0 .fp-tableCell .swiper_main .swiper-slide .slide_main_info .title .color_letter {
