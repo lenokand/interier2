@@ -194,7 +194,8 @@ if (tab_controls2.length > 0) {
 
 
 
-// отображение портфолио меню
+// отображение портфолио в меню
+
 let menuItemPortfolio = document.querySelector('menu .portfolio_item')
 let menuRightArea = document.querySelector('.portfolio_right_block')
 let menuPortfolioBack = document.querySelector('.portfolio_menu .button_back')
@@ -217,13 +218,20 @@ function showBlock() {
 
   if (portfolioBlock.classList.contains('show')) {
     // fullpage_api.setAllowScrolling(false);
-    fullpage_api.destroy('all');
+
+    if( window.screen.width >= 900){
+      fullpage_api.destroy('all');
+    }
+    
     // console.log(portfolioBlock.classList.contains('show'));
 
   } else {
     // fullpage_api.setAllowScrolling(true);
     // fullpage_api.reBuild();
-    initializeFullPage()
+    if( window.screen.width >= 900){
+      initializeFullPage() 
+    }
+    
     // console.log(portfolioBlock.classList.contains('show'));
   }
   // fullpage_api.setAllowScrolling(false);
@@ -492,7 +500,7 @@ if ( cards7 !== null) {
 
 
 
-
+// бургер меню
 
 const iconClose = document.querySelector('.adaptive_close');
 
@@ -501,18 +509,18 @@ const icons = document.querySelector('.burger');
 
   icons.addEventListener('click', (event) => {
     icons.classList.toggle("open");  
-    document.body.classList.toggle("menu_open");  
+    document.body.classList.toggle("burger_menu_open");  
     document.querySelector('header').classList.toggle("show");  
-    // fullpage_api.destroy('all');
+   
 
   });
 
 iconClose.addEventListener('click', (event) => {
   icons.classList.toggle("open");  
-  document.body.classList.toggle("menu_open");  
+  document.body.classList.toggle("burger_menu_open");  
   document.querySelector('header').classList.toggle("show");  
 
-  // initializeFullPage()
+ 
 });
 
 
@@ -551,7 +559,15 @@ $(".js-range-slider").ionRangeSlider({
 
 });
 
-const filterGallary = Fancybox.bind('[data-fancybox="modal-call-time"]', {
+const filterGallaryTime = Fancybox.bind('[href="#modal-call-time"]', {
+  // closeButton: "top",
+  dragToClose: false,
+  // Thumbs: false,
+  // Carousel: {
+  //     Dots: false,
+  // },
+});
+const filterGallary = Fancybox.bind('[href="#modal-call"]', {
   // closeButton: "top",
   dragToClose: false,
   // Thumbs: false,

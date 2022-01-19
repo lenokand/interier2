@@ -10,12 +10,48 @@
     <link rel="icon" type="image/x-icon" sizes="16x16" href="icons/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <!-- <link rel="stylesheet" href="dist/fullpage.css"> -->
     <link rel="stylesheet" href="bundle.css">
 </head>
 
 <body class="fp-viewing-0 inner">
-    
+    <div class="addaptive_menu">
+        <a href="index.html" class="logo">
+            <img src="products/logo.svg" class="darc_fon" alt="">
+            <img src="products/logo_dark.svg" class="light_fon" alt="">
+        </a>
+        <div class="left_block">
+            <div class="social">
+                <a class="social_tel" href="tel:+7 (495) 104 85 95">+7 (495) 104 85 95</a>
+                <a href="#modal-call-time" data-fancybox class="callback_btn">
+                    Перезвоните мне!
+                </a>
+            </div>
+            <div class="burger_wrapper">
+                <div class="burger nav-icon-1">
+            
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  
+                </div>
+            </div>
+        </div>
+      
+
+
+
+  
+        
+    </div>
     <header>
         <div class="top_row">
             <div class="container">
@@ -933,9 +969,9 @@
                     <div class="contact_tab_item active">
                         Клиентам 
                     </div>
-                    <div class="contact_tab_item">
+                    <!-- <div class="contact_tab_item">
                         Как добраться на машине 
-                    </div>
+                    </div> -->
                     <div class="contact_tab_item">
                         Как добраться пешком
                     </div>
@@ -988,9 +1024,9 @@
                         
 
                     </div>
-                    <div class="contact_inner_item ">
+                    <!-- <div class="contact_inner_item ">
                         видео
-                    </div>
+                    </div> -->
                     <div class="contact_inner_item ">
                         фото
                     </div>
@@ -1072,7 +1108,7 @@
                 <div class="sign">
                     Как вас зовут?
                 </div>
-               
+
                 <input type="text" placeholder="Имя">
                 <div class="sign">
                     Номер телефона
@@ -1096,14 +1132,14 @@
             </div>
             <form action="" method="post">
                 <div class="time">
-                    <input type="text" class="js-range-slider" name="my_range"  />
+                    <input type="text" class="js-range-slider" name="my_range" />
                     <div class="range_block">
                         <input type="text" name="" id="input-from">
                         -
                         <input type="text" name="" id="input-to">
-                    </div>    
+                    </div>
                 </div>
-                
+
 
                 <div class="sign">
                     Как вас зовут?
@@ -1138,7 +1174,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"
     integrity="sha512-gSf3NCgs6wWEdztl1e6vUqtRP884ONnCNzCpomdoQ0xXsk06lrxJsR7jX5yM/qAGkPGsps+4bLV5IEjhOZX+gg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+ <!--Plugin JavaScript file-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
 <script type="text/javascript">
@@ -1158,7 +1195,7 @@
         // slidesPerView: "auto",
         // centeredSlides: true,
         loop: true,
-        freeMode: true,
+        freeMode: false,
         grabCursor: true,
         navigation: {
             nextEl: ".swiper-button-next",
@@ -1167,11 +1204,24 @@
         // autoplay: {
         //     delay: 9000,
         // },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 1,
+            
+            },
+          
+            // when window width is >= 640px
+            900: {
+                slidesPerView: "auto",
+
+            }
+            }
     });
     // сертификаты
     var swiper_team = new Swiper(".swiper_certificate", {
         slidesPerView: "4",
-        spaceBetween: 30,
+        spaceBetween: 100,
         // slidesPerView: 3,
         // effect: "fade",
         // speed: 900,
@@ -1190,6 +1240,22 @@
         // autoplay: {
         //     delay: 9000,
         // },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 2,
+            direction: 'vertical',
+            freeMode: false,
+            
+            },
+          
+            // when window width is >= 640px
+            900: {
+                slidesPerView: "4",
+                direction: 'horizontal',
+                freeMode: true,
+            }
+            }
     });
    // 8 экран
    var swiper_reviews = new Swiper(".swiper_reviews", {
