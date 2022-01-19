@@ -8767,6 +8767,7 @@ margin-bottom: 0;
                 img {
                     width: auto;
                     height: 670px;
+                    
                 }
 
                 .sign_back {
@@ -9365,7 +9366,24 @@ margin-bottom: 0;
     }
 
     .section#section3 .swiper-slide .left_part img {
-        height: 650px;
+        // height: 650px;
+        height: 580px;
+        transform: translateX(50px);
+    }
+    #section3 .container{
+        width: 100%;
+        max-width: 100% ;
+        
+    }
+    .section#section3 .swiper-slide .left_part .sign_back{
+        left: -20px;
+    }
+    .section#section3 .swiper-slide .left_part .sign_front{
+        z-index: 1;
+    }
+    .section#section3 .swiper-slide .left_part{
+        overflow-x: hidden ;
+        
     }
 
     .swiper_main .swiper_pagination_block {
