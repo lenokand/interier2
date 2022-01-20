@@ -2749,143 +2749,143 @@
     });
 
 
-        swiper_main.on('slideChange', function () {
-            currentSlide()
-            // changePreveiw()
+        // swiper_main.on('slideChange', function () {
+        //     currentSlide()
+        //     // changePreveiw()
 
-        });
+        // });
 
-        let preveiw_block = document.querySelector('.swiper_main .preview_block')
-        let current_slide_number = document.querySelector('.swiper-pagination-custom')
-        if (current_slide_number) {
-            current_slide_number.innerHTML =
-                `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
-        }
+        // let preveiw_block = document.querySelector('.swiper_main .preview_block')
+        // let current_slide_number = document.querySelector('.swiper-pagination-custom')
+        // if (current_slide_number) {
+        //     current_slide_number.innerHTML =
+        //         `<div class="nums"><span>0</span></div> <div class="nums" id="change_num"> <span>1</span>  <span>2</span>  <span>3</span> </div>`
+        // }
 
-        function currentSlide() {
-            let current_slide = document.querySelector('.swiper_main .swiper-slide-visible')
+        // function currentSlide() {
+        //     let current_slide = document.querySelector('.swiper_main .swiper-slide-visible')
 
-            // console.log(current_slide);
-            // console.log(current_slide.getAttribute('aria-label'));
-            let aria_label = current_slide.getAttribute('aria-label');
-            aria_label_obj = aria_label.split('/ ')
-
-
-            if (aria_label_obj[0] <= 9) {
-                // current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
-                next_slide_number = +aria_label_obj[0]
+        //     // console.log(current_slide);
+        //     // console.log(current_slide.getAttribute('aria-label'));
+        //     let aria_label = current_slide.getAttribute('aria-label');
+        //     aria_label_obj = aria_label.split('/ ')
 
 
-
-                const styleRoot = document.getElementById("change_num");
-
-                let numbers = aria_label_obj[0]
-
-                function setNumberPercent(numbers) {
-                    let numberBottom;
-                    for (i in numbers) {
-                        switch (numbers[i]) {
-
-                            case "1":
-                                numberBottom = "translateY(0px)";
-                                break;
-                            case "2":
-                                numberBottom = "translateY(-4.375rem)";
-                                break;
-                            case "3":
-                                numberBottom = "translateY(-8.75rem)";
-                                break;
-
-                        }
-
-                        styleRoot.style.transform = numberBottom;
-                    }
-                }
-                setNumberPercent(numbers)
+        //     if (aria_label_obj[0] <= 9) {
+        //         // current_slide_number.innerHTML = '0' + (+aria_label_obj[0])
+        //         next_slide_number = +aria_label_obj[0]
 
 
 
+        //         const styleRoot = document.getElementById("change_num");
 
-            } else {
-                // current_slide_number.innerHTML = aria_label_obj[0]
-            }
-            // изменение превью следующего слайда
-            // находим все меняющиеся блоки в превьюхе
-            // let preveiw_block = document.querySelector('.swiper_main .preview_block')
-            let preveiw_number = preveiw_block.querySelector('.bottom_number')
-            let preveiw_sign = preveiw_block.querySelector('.right_sign')
+        //         let numbers = aria_label_obj[0]
 
+        //         function setNumberPercent(numbers) {
+        //             let numberBottom;
+        //             for (i in numbers) {
+        //                 switch (numbers[i]) {
 
-            // 
-            let slide_blocks = document.querySelectorAll('.swiper_main .swiper-slide')
-            let slide_massive_number = +aria_label_obj[0] + 1
+        //                     case "1":
+        //                         numberBottom = "translateY(0px)";
+        //                         break;
+        //                     case "2":
+        //                         numberBottom = "translateY(-4.375rem)";
+        //                         break;
+        //                     case "3":
+        //                         numberBottom = "translateY(-8.75rem)";
+        //                         break;
 
-            // console.log(slide_massive_number, slide_blocks.length)
+        //                 }
 
-
-            let slide_block = slide_blocks[slide_massive_number]
-            if (slide_block) {
-                let slide_number = slide_block.querySelector('.slider_counts .number')
-                let slide_sign = slide_block.querySelector('.slider_counts')
-
-
-                preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
-                //   console.log(slide_block.style.backgroundImage)
-                //   console.log(preveiw_number.innerHTML)
-                preveiw_number.innerHTML = slide_number.innerHTML
-            }
-
-
-            if (slide_massive_number == slide_blocks.length) {
-                // preveiw_block.style.display = "none"
-                let slide_massive_number = aria_label_obj[0]
-                // console.log(slide_massive_number, slide_blocks.length)
-
-
-                let slide_block = slide_blocks[slide_massive_number]
-                if (slide_block) {
-                    let slide_number = slide_block.querySelector('.slider_counts .number')
-                    let slide_sign = slide_block.querySelector('.slider_counts')
-
-
-                    preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
-                    //   console.log(slide_block.style.backgroundImage)
-                    //   console.log(preveiw_number.innerHTML)
-                    preveiw_number.innerHTML = slide_number.innerHTML
-                }
+        //                 styleRoot.style.transform = numberBottom;
+        //             }
+        //         }
+        //         setNumberPercent(numbers)
 
 
 
 
-            } else {
-                preveiw_block.style.display = "flex"
-            }
-            // полоса состояния
-            let progress_bar = document.querySelector(".swiper-scrollbar-custom-fill")
-
-            if (progress_bar.classList.contains('animated')) {
-                progress_bar.classList.remove('animated')
-                // console.log(111);
-                progress_bar.classList.add('animated2')
-            } else {
-                progress_bar.classList.remove('animated2')
-                // console.log(112);
-                progress_bar.classList.add('animated')
-            }
+        //     } else {
+        //         // current_slide_number.innerHTML = aria_label_obj[0]
+        //     }
+        //     // изменение превью следующего слайда
+        //     // находим все меняющиеся блоки в превьюхе
+        //     // let preveiw_block = document.querySelector('.swiper_main .preview_block')
+        //     let preveiw_number = preveiw_block.querySelector('.bottom_number')
+        //     let preveiw_sign = preveiw_block.querySelector('.right_sign')
 
 
+        //     // 
+        //     let slide_blocks = document.querySelectorAll('.swiper_main .swiper-slide')
+        //     let slide_massive_number = +aria_label_obj[0] + 1
 
-        }
-        currentSlide()
-
-        preveiw_block.addEventListener('click', function () {
-
-            let next_slide = document.querySelector('.swiper_main .swiper-button-next')
-            next_slide.click()
-            // console.log(111)
+        //     // console.log(slide_massive_number, slide_blocks.length)
 
 
-        })
+        //     let slide_block = slide_blocks[slide_massive_number]
+        //     if (slide_block) {
+        //         let slide_number = slide_block.querySelector('.slider_counts .number')
+        //         let slide_sign = slide_block.querySelector('.slider_counts')
+
+
+        //         preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
+        //         //   console.log(slide_block.style.backgroundImage)
+        //         //   console.log(preveiw_number.innerHTML)
+        //         preveiw_number.innerHTML = slide_number.innerHTML
+        //     }
+
+
+        //     if (slide_massive_number == slide_blocks.length) {
+        //         // preveiw_block.style.display = "none"
+        //         let slide_massive_number = aria_label_obj[0]
+        //         // console.log(slide_massive_number, slide_blocks.length)
+
+
+        //         let slide_block = slide_blocks[slide_massive_number]
+        //         if (slide_block) {
+        //             let slide_number = slide_block.querySelector('.slider_counts .number')
+        //             let slide_sign = slide_block.querySelector('.slider_counts')
+
+
+        //             preveiw_block.style.backgroundImage = slide_block.style.backgroundImage
+        //             //   console.log(slide_block.style.backgroundImage)
+        //             //   console.log(preveiw_number.innerHTML)
+        //             preveiw_number.innerHTML = slide_number.innerHTML
+        //         }
+
+
+
+
+        //     } else {
+        //         preveiw_block.style.display = "flex"
+        //     }
+        //     // полоса состояния
+        //     let progress_bar = document.querySelector(".swiper-scrollbar-custom-fill")
+
+        //     if (progress_bar.classList.contains('animated')) {
+        //         progress_bar.classList.remove('animated')
+        //         // console.log(111);
+        //         progress_bar.classList.add('animated2')
+        //     } else {
+        //         progress_bar.classList.remove('animated2')
+        //         // console.log(112);
+        //         progress_bar.classList.add('animated')
+        //     }
+
+
+
+        // }
+        // currentSlide()
+
+        // preveiw_block.addEventListener('click', function () {
+
+        //     let next_slide = document.querySelector('.swiper_main .swiper-button-next')
+        //     next_slide.click()
+        //     // console.log(111)
+
+
+        // })
 
         // $(".js-range-slider").ionRangeSlider();
     </script>
