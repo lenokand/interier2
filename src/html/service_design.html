@@ -839,11 +839,25 @@
             </div>
             <form action="">
                 <div class="messegers_block">
-                    <div class="messeger_item">
+                    
+                    <label class="messeger_item">
+                        <input type="radio"  name="masseger">
+                        <img src="products/wb.png " alt="">
+                    </label>
+                    <label class="messeger_item">
+                        <input type="radio"  name="masseger">
+                        <img src="products/tg.png " alt="">
+                    </label>
+                    <label class="messeger_item">
+                        <input type="radio"  name="masseger">
+                        <img src="products/wa.png " alt="">
+                    </label>
+                    
+                    <!-- <div class="messeger_item">
                         <img src="products/wb.png" alt="">
                     </div>
                     <div class="messeger_item"> <img src="products/tg.png" alt=""></div>
-                    <div class="messeger_item"> <img src="products/wa.png" alt=""></div>
+                    <div class="messeger_item"> <img src="products/wa.png" alt=""></div> -->
                 </div>
 
                 <div class="sign">
@@ -2266,6 +2280,19 @@
             // autoplay: {
             //     delay: 9000,
             // },
+            breakpoints: {
+            // when window width is >= 320px
+                    320: {
+                    slidesPerView: 1,
+                    
+                    },
+                
+                    // when window width is >= 640px
+                    900: {
+                        slidesPerView: "auto",
+
+                    }
+            }
         });
         // 8 экран
         var swiper_reviews = new Swiper(".swiper_reviews", {
@@ -2289,6 +2316,19 @@
             // autoplay: {
             //     delay: 9000,
             // },
+            breakpoints: {
+            // when window width is >= 320px
+                    320: {
+                    slidesPerView: 1,
+                    
+                    },
+                
+                    // when window width is >= 640px
+                    900: {
+                        slidesPerView: "auto",
+
+                    }
+            }
         });
 
 
