@@ -18,6 +18,41 @@
 </head>
 
 <body class="fp-viewing-0 ">
+    <div class="addaptive_menu">
+        <a href="index.html" class="logo">
+            <img src="products/logo.svg" class="darc_fon" alt="">
+            <img src="products/logo_dark.svg" class="light_fon" alt="">
+        </a>
+        <div class="left_block">
+            <div class="social">
+                <a class="social_tel" href="tel:+7 (495) 104 85 95">+7 (495) 104 85 95</a>
+                <a href="#modal-call-time" data-fancybox class="callback_btn">
+                    Перезвоните мне!
+                </a>
+            </div>
+            <div class="burger_wrapper">
+                <div class="burger nav-icon-1">
+            
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  
+                </div>
+            </div>
+        </div>
+      
+
+
+
+  
+        
+    </div>
     <header>
         <div class="top_row">
             <div class="container">
@@ -50,6 +85,16 @@
 
         </div>
         <div class="bottom_row">
+            <div class="adaptive_close">
+                <div class="container">
+                    <svg width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.57242 9.83313H23.3332C28.58 9.83313 32.8332 14.0864 32.8332 19.3331C32.8332 24.5798 28.58 28.8331 23.3332 28.8331H19.3749V25.6665H23.3332C26.831 25.6665 29.6666 22.8309 29.6666 19.3331C29.6666 15.8353 26.831 12.9998 23.3332 12.9998H6.57242L13.3695 19.7969L11.1303 22.036L0.510742 11.4165L11.1303 0.796875L13.3695 3.03605L6.57242 9.83313Z" fill="#424242"/>
+                        </svg>
+        
+                        Закрыть меню
+                </div>
+               
+            </div>
             <div class="container">
                 <a href="index.html" class="logo">
                     <img src="products/logo.svg" class="darc_fon" alt="">
@@ -2612,6 +2657,19 @@
             // autoplay: {
             //     delay: 9000,
             // },
+            breakpoints: {
+            // when window width is >= 320px
+                    320: {
+                    slidesPerView: 1,
+                    
+                    },
+                
+                    // when window width is >= 640px
+                    900: {
+                        slidesPerView: "auto",
+
+                    }
+            }
         });
         // 8 экран
         var swiper_reviews = new Swiper(".swiper_reviews", {
@@ -2635,12 +2693,25 @@
             // autoplay: {
             //     delay: 9000,
             // },
+            breakpoints: {
+            // when window width is >= 320px
+                    320: {
+                    slidesPerView: 1,
+                    
+                    },
+                
+                    // when window width is >= 640px
+                    900: {
+                        slidesPerView: "auto",
+
+                    }
+            }
         });
   
  // сертификаты
  var swiper_team = new Swiper(".swiper_certificate", {
         slidesPerView: "4",
-        spaceBetween: 30,
+        spaceBetween: 100,
         // slidesPerView: 3,
         // effect: "fade",
         // speed: 900,
@@ -2659,6 +2730,22 @@
         // autoplay: {
         //     delay: 9000,
         // },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 2,
+            direction: 'vertical',
+            freeMode: false,
+            
+            },
+          
+            // when window width is >= 640px
+            900: {
+                slidesPerView: "4",
+                direction: 'horizontal',
+                freeMode: true,
+            }
+            }
     });
 
 
