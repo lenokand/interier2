@@ -127,14 +127,29 @@ body.burger_menu_open {
 
 }
 
+
+@media screen and (min-width:1100px) {
+    .swiper-slide {
+        user-select: none;
+    }
+    .swiper_main .totale_slides_custom{
+        user-select: none;
+    }
+}
 @media screen and (max-width:1200px) {
     .container {
         max-width: 90%;
+    }
+    #section5 .swiper-slide.swiper-slide-active .bottom_info{
+        padding-bottom: 15px;
     }
 
     // div.portfolio_menu.show{
     //     top: 110px;
     // }
+    .service_main{
+        overflow-x: hidden;
+    }
 }
 
 
@@ -166,7 +181,27 @@ a {
     right: 0;
     // background-color: chartreuse;
     z-index: 101;
-    backdrop-filter: blur(34px);
+
+
+    /* slightly transparent fallback */
+
+    background-color: rgba(150, 150, 150, 0.98);
+  
+  
+  /* if backdrop support: very transparent and blurred */
+  @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+
+      background-color: rgba(255, 255, 255, .5);
+    //   background-color: none;
+      -webkit-backdrop-filter: blur(2em);
+      backdrop-filter: blur(2em);
+      backdrop-filter: blur(34px);
+    
+  }
+
+   
+    // filter: blur(34px);
+
     transform: translateY(-2000px);
     transition: 350ms linear;
     opacity: 0;
@@ -644,6 +679,9 @@ a {
 
                         &::before {
                             display: none;
+                        }
+                        &.notactive{
+                            background:none;
                         }
                     }
 
@@ -2415,7 +2453,7 @@ header {
         right: 0;
         top: toRem(390);
         bottom: 0;
-        background: linear-gradient(94.74deg, #1D1818 9.1%, #343131 98.42%);
+        background: linear-gradient(290.22deg, #1D1818 -23.41%, #343131 105.37%);
         width: 50%;
         height: 100%;
         z-index: 0;
@@ -2457,7 +2495,7 @@ header {
     .swiper-slide {
         width: toRem(540);
         padding-top: toRem(20);
-
+        // user-select: none;
 
 
         // max-width: toRem(535);   
@@ -2827,7 +2865,7 @@ header {
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: 58%, 50% 100%;
-
+   
     // .darc_block {
     //     position: absolute;
     //     // left: 0;
@@ -3557,7 +3595,7 @@ footer {
         justify-content: space-around;
         align-items: center;
 
-        a {
+        a, div {
 
             font-family: Josefin Sans;
             font-style: normal;
@@ -4629,7 +4667,28 @@ footer {
         }
     }
 
-    .contact_inner_block {}
+    .sign_img {
+        background: #F7F9FB;
+        border-radius: 2px;
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        .left_part{
+            width: calc(50% - 20px);
+            font-size: toRem(24);
+                line-height: 147.02%;
+                /* or 35px */
+
+
+                color: #434040;
+               .sign_img_title {
+                    font-weight: 600;
+                }
+        }
+        .img_part{
+            width: calc(50% - 15px);
+        }
+    }
 
     .contact_inner_item {
         display: none;
@@ -7713,8 +7772,9 @@ tbody {
     }
 
     .video_block .video_wrapper .btn-contain {
+        padding-left: 1.4375rem;
         svg {
-            max-width: 80%;
+            max-width: 75%;
         }
     }
 
@@ -7888,6 +7948,7 @@ tbody {
 }
 
 @media screen and (max-width:900px) {
+  
     .faq {
         .accordion-item.show .accordion-item-header {
             padding-left: 15px;
@@ -7901,7 +7962,30 @@ tbody {
             padding: 15px;
         }
     }
+   .contacts_section .sign_img {
+       flex-direction: column;
+        padding: 15px;
+        .left_part{
+            width: 100%;
+            font-size: 18px;
+                line-height: 147.02%;
+                margin-bottom: 30px;
+                /* or 35px */
 
+
+                color: #434040;
+               .sign_img_title {
+                    font-weight: 600;
+                }
+        }
+        .img_part{
+            width: 100%;
+            img{
+                margin: auto;
+                max-height: 350px;
+            }
+        }
+    }
     .addaptive_menu {
         display: block;
         position: absolute;
@@ -7986,21 +8070,26 @@ tbody {
             display: flex;
         }
     }
-
+body{
+    overflow-x: hidden!important;
+    max-width: 100vw;
+}
     .fp-viewing-0 header,
     .menu_open header {
-        left: -100%;
         // left: 0;
+        left: -100%;
         top: 0;
         // right: 33px;
-        right: 0;
+        // right: 0%;
+        // right: 100%;
+        width: 100vw;
         bottom: 0;
         display: flex;
         flex-direction: column-reverse;
         background: #F7F9FB;
         justify-content: space-between;
         position: absolute;
-
+        transition: 300ms ease;
         .adaptive_close {
             display: block;
             border-bottom: 1px solid #E6E6E6;
@@ -8102,6 +8191,7 @@ tbody {
 
 
         &.show {
+            right: 0;
             left: 0;
             // position: fixed;
             position: absolute;
@@ -9471,16 +9561,16 @@ tbody {
         }
 
         .swiper {
-            padding-bottom: 100px;
+            // padding-bottom: 100px;
         }
 
         .swiper-wrapper {
 
-            height: 760px;
+            // height: 760px;
 
             .swiper-slide img {
                 margin: auto;
-                height: 100%;
+                // height: 100%;
             }
         }
 
@@ -9523,7 +9613,7 @@ tbody {
     }
 
     div.contacts_section {
-        padding-top: 0;
+        padding-top: 110px;
 
         .contact_tabs_block {
             flex-direction: column;
@@ -9537,6 +9627,7 @@ tbody {
         .container>.title {
             font-size: 38px;
             line-height: 100%;
+            margin-bottom: 15px;
         }
 
         .wraper_map {
@@ -9565,6 +9656,9 @@ tbody {
 
 // адаптив
 @media screen and (max-width:900px) {
+    .fancybox__slide{
+        max-width: 100vw;
+    }
     .section#section1 {
         background: linear-gradient(94.74deg, #1D1818 9.1%, #343131 98.42%);
 
@@ -9942,7 +10036,18 @@ tbody {
 
 
     }
+    #section2   .left_part {
+        width: 100%;
 
+        .tab_control_item:before {
+            width: 450px;
+            left: -440px;
+        }
+
+        .tab_control_item:hover:before {
+            left: 0;
+        }
+    }
     .section#section7 {
         .title {
             font-size: 55px;
@@ -10485,7 +10590,8 @@ tbody {
     }
 
     .section#section3 .swiper-slide .left_part .sign_back {
-        left: -20px;
+        // left: -20px;
+        left: 0;
     }
 
     .section#section3 .swiper-slide .left_part .sign_front {
@@ -10509,13 +10615,34 @@ tbody {
 
 
 @media screen and (max-width:600px) {
+    .section#section3 .swiper-slide .right_part{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    section.work_main .darc_block{
+        height: 350px;
+    }
     section.serv_stages.stages {
         margin-bottom: 30px;
     }
-    
+    .video_block .video_wrapper .btn-contain{
+        padding-left: 0.4375rem;
+    }
     section.equipment .title,
     .inner .section#section8 .title {
         font-size: 45px;
+    }
+    div.price_section .title{
+        font-size: 43px;
+    }
+    section.about_main .container .left_block .title, section.about_numbers .title{
+        font-size: 49px;
+    }
+    section.about_command .title{
+        font-size: 39px;
+    }
+    section.about_main .darc_block {
+        height: 430px;
     }
     section.free .left_part .title{
         font-size: 39px;
@@ -10590,7 +10717,8 @@ tbody {
 
     .section#section3 .swiper-slide .left_part .sign_back {
         top: 90px;
-        font-size: 40px;
+        // font-size: 40px;
+        font-size: 30px;
         line-height: 104px;
     }
 
@@ -10660,14 +10788,25 @@ tbody {
             max-width: 300px;
         }
     }
-
+    .price_section .price_block .price_service_item{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width:400px) {
     div#section4.section.service .container_right .right_part .right_item {
         padding-left: 15px;
     }
+    section.about_main .darc_block{
+        height: 390px;
+    }
 
+    section.work_main .darc_block{
+        height: 335px;
+    }
+    div.price_section .title{
+        font-size: 39px;
+    }
     #section8 .swiper-slide .customer_info .position,
     .contacts_section .wraper_map .contacts .contacts_info .info_item .text,
     .contacts_section .wraper_map .contacts .contacts_info .info_item a {
