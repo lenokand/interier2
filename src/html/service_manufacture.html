@@ -2056,32 +2056,79 @@
             <div class="title">
                 Наши партнёры
             </div>
-            <div class="block_logos">
-                <div class="logos_item">
-                    <img src="products/logos1.png" alt="">
+
+            
+            <div class="swiper swiper_logos">
+                <div class="swiper-wrapper">
+
+                   
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos1.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos3.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos5.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos6.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos7.png" alt="">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="logos_item">
+                            <img src="products/logos8.png" alt="">
+                        </div>
+                    </div>
+                
+
+
                 </div>
-                <div class="logos_item">
-                    <img src="products/logos2.png" alt="">
+
+
+                <div class="swiper-button-prev">
+                    <svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M0.939189 13.0607C0.353402 12.4749 0.353402 11.5251 0.939189 10.9393L10.4851 1.3934C11.0709 0.807611 12.0207 0.807611 12.6065 1.3934C13.1922 1.97919 13.1922 2.92893 12.6065 3.51472L4.12117 12L12.6065 20.4853C13.1922 21.0711 13.1922 22.0208 12.6065 22.6066C12.0207 23.1924 11.0709 23.1924 10.4851 22.6066L0.939189 13.0607ZM3.41406 13.5H1.99985V10.5H3.41406V13.5Z" />
+                    </svg>
+
+
                 </div>
-                <div class="logos_item">
-                    <img src="products/logos3.png" alt="">
+
+                <div class="swiper-button-next">
+                    <svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12.4749 13.0607C13.0607 12.4749 13.0607 11.5251 12.4749 10.9393L2.92893 1.3934C2.34315 0.807611 1.3934 0.807611 0.807611 1.3934C0.221826 1.97919 0.221826 2.92893 0.807611 3.51472L9.29289 12L0.807611 20.4853C0.221826 21.0711 0.221826 22.0208 0.807611 22.6066C1.3934 23.1924 2.34315 23.1924 2.92893 22.6066L12.4749 13.0607ZM10 13.5H11.4142V10.5H10V13.5Z" />
+                    </svg>
+
                 </div>
-                <div class="logos_item">
-                    <img src="products/logos4.png" alt="">
-                </div>
-                <div class="logos_item">
-                    <img src="products/logos5.png" alt="">
-                </div>
-                <div class="logos_item">
-                    <img src="products/logos6.png" alt="">
-                </div>
-                <div class="logos_item">
-                    <img src="products/logos7.png" alt="">
-                </div>
-                <div class="logos_item">
-                    <img src="products/logos8.png" alt="">
-                </div>
+
+
             </div>
+
+          
         </div>
 
     </section>
@@ -2627,7 +2674,45 @@
         // },
     });
 
-
+// лого
+var swiper_team = new Swiper(".swiper_logos", {
+        slidesPerView: "4",
+        spaceBetween: 20,
+        // slidesPerView: 3,
+        // effect: "fade",
+        speed: 900,
+        // fadeEffect: {
+        //     // crossFade: true
+        // },
+        // slidesPerView: "auto",
+        // centeredSlides: true,
+        loop: true,
+        freeMode: true,
+        grabCursor: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+            delay: 5000,
+        },
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+            slidesPerView: 1,
+            // direction: 'vertical',
+            freeMode: false,
+            
+            },
+          
+            // when window width is >= 640px
+            900: {
+                slidesPerView: "4",
+                // direction: 'horizontal',
+                freeMode: true,
+            }
+            }
+    });
         // swiper_main.on('slideChange', function () {
         //     currentSlide()
         //     // changePreveiw()
