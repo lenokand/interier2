@@ -105,7 +105,7 @@ select {
     font: inherit;
 }
 
-button,
+button
     {
     cursor: pointer;
 }
@@ -652,7 +652,7 @@ a {
                 // flex-grow: 1;
                 // height: 100%;
                 // padding-left: 0;
-                background: linear-gradient(96.98deg, rgba(0, 0, 0, 0) 4.6%, rgba(37, 37, 37, 0.62) 89.7%);
+                background: linear-gradient(96.98deg, rgba(0, 0, 0, 0) 3.6%, rgba(37, 37, 37, 0.80) 49.7%);
 
 
 
@@ -8264,7 +8264,7 @@ body{
             border-top: 1px solid #E6E6E6;
             padding-top: 30px;
             padding-bottom: 30px;
-
+            min-height: 220px;
             .container {
                 flex-direction: column;
                 align-items: flex-start;
@@ -8450,7 +8450,7 @@ body{
     .burger_menu_open {
         header.show {
             overflow-y: scroll;
-
+            min-height: 100vh;
             .bottom_row menu {
                 height: auto;
             }
@@ -10884,6 +10884,12 @@ body{
     }
 }
 
+@media screen and (max-width:400px) {
+    .fp-viewing-0 header .bottom_row{
+        height: 655px;
+    }
+
+}
 @media screen and (max-width:400px) {
     div#section4.section.service .container_right .right_part .right_item {
         padding-left: 15px;
